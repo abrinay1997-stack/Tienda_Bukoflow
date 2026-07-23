@@ -3,6 +3,7 @@ import { Hero } from '@/components/Hero';
 import { CatalogIntro } from '@/components/CatalogIntro';
 import { Offers } from '@/components/Offers';
 import { PurchaseProcess } from '@/components/PurchaseProcess';
+import { Pricing } from '@/components/Pricing';
 
 export default function HomePage() {
   return (
@@ -13,6 +14,7 @@ export default function HomePage() {
         <CatalogIntro />
         <Offers />
         <PurchaseProcess />
+        <Pricing />
       </main>
     </>
   );
