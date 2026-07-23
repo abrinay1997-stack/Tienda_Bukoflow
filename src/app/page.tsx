@@ -1,4 +1,3 @@
-import { Nav } from '@/components/Nav';
 import { Hero } from '@/components/Hero';
 import { CatalogIntro } from '@/components/CatalogIntro';
 import { Offers } from '@/components/Offers';
@@ -8,24 +7,19 @@ import { Testimonials } from '@/components/Testimonials';
 import { ServicesTeaser } from '@/components/ServicesTeaser';
 import { FAQ } from '@/components/FAQ';
 import { CTA } from '@/components/CTA';
-import { Footer } from '@/components/Footer';
 
 export default function HomePage() {
   return (
-    <>
-      <Nav />
-      <main id="main">
-        <Hero />
-        <CatalogIntro />
-        <Offers />
-        <PurchaseProcess />
-        <Pricing />
-        <Testimonials />
-        <ServicesTeaser />
-        <FAQ />
-        <CTA />
-      </main>
-      <Footer />
-    </>
+    <main id="main">
+      <Hero />
+      <CatalogIntro />
+      <Offers />
+      <PurchaseProcess />
+      <Pricing />
+      <Testimonials />
+      <ServicesTeaser />
+      <FAQ />
+      <CTA />
+    </main>
   );
 }
