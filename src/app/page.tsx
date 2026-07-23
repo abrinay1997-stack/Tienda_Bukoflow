@@ -7,6 +7,7 @@ import { Pricing } from '@/components/Pricing';
 import { Testimonials } from '@/components/Testimonials';
 import { ServicesTeaser } from '@/components/ServicesTeaser';
 import { FAQ } from '@/components/FAQ';
+import { CTA } from '@/components/CTA';
 
 export default function HomePage() {
   return (
@@ -21,6 +22,7 @@ export default function HomePage() {
         <Testimonials />
         <ServicesTeaser />
         <FAQ />
+        <CTA />
       </main>
     </>
   );
