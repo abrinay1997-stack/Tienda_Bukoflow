@@ -1,0 +1,73 @@
+name: Deploy preview to GitHub Pages
+
+# Build estático (next export) del sitio. En cada PR solo se valida que compile
+# (check verde/rojo en el PR, sin desplegar). Al hacer push/merge a main, se
+# despliega la única preview viva de GitHub Pages — visible en Settings > Pages
+# y en la pestaña "Deployments" del repo, con el link ahí mismo.
+#
+# Requiere una sola vez: Settings > Pages > Source = "GitHub Actions".
+#
+# Limitación conocida: esta preview es 100% estática, así que la API route
+# /api/chat (Groq) no está disponible aquí. El chatbot solo funciona en
+# Netlify (o `npm run dev`), donde sí hay servidor. Ver docs/DECISION.md.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v5
+
+      - name: Build static export (sin /api — no soportado en export estático)
+        env:
+          STATIC_PREVIEW: '1'
+          NEXT_PUBLIC_BASE_PATH: ${{ steps.pages.outputs.base_path }}
+        run: |
+          mv src/app/api /tmp/api-backup
+          npm run build
+          mv /tmp/api-backup src/app/api
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./out
+
+  deploy:
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

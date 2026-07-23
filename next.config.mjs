@@ -10,7 +10,13 @@ const nextConfig = {
   outputFileTracingRoot: __dirname,
   // Solo el workflow de preview de GitHub Pages activa esto (build estático,
   // sin servidor). Netlify sigue construyendo en modo normal, con /api/chat vivo.
-  ...(process.env.STATIC_PREVIEW === '1' ? { output: 'export' } : {}),
+  ...(process.env.STATIC_PREVIEW === '1'
+    ? {
+        output: 'export',
+        basePath: process.env.NEXT_PUBLIC_BASE_PATH || '',
+        images: { unoptimized: true },
+      }
+    : {}),
 };
 
 export default nextConfig;

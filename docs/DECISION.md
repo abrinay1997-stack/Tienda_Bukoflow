@@ -79,13 +79,19 @@ variables de entorno de Netlify — nunca se expone al cliente.
 Netlify + `@netlify/plugin-nextjs`. Git propio en esta carpeta, remoto:
 `https://github.com/abrinay1997-stack/Tienda_Bukoflow.git`.
 
-**Preview por PR (previo a Netlify):** `.github/workflows/preview.yml` publica un
-build estático (`next export`) en GitHub Pages por cada PR, con el link comentado
-automáticamente. No requiere cuenta de Netlify. Limitación: al ser export estático,
-`/api/chat` (Groq) no está disponible ahí — solo en Netlify o `npm run dev`.
+**Preview previo a Netlify:** `.github/workflows/pages.yml` construye un build
+estático (`next export`) del sitio. En cada PR solo valida que compile (check
+verde/rojo, sin desplegar — no pisa la preview viva). Al hacer push/merge a `main`,
+despliega la única preview viva de GitHub Pages, visible con su link directo en la
+pestaña "Deployments" del repo y en Settings → Pages. No requiere cuenta de Netlify.
+
+Limitación aceptada: solo hay **un** despliegue vivo a la vez (el siguiente merge a
+`main` pisa al anterior) — no hay un link independiente por cada PR abierto en
+simultáneo. Y al ser export estático, `/api/chat` (Groq) no está disponible ahí,
+solo en Netlify o `npm run dev`.
+
 Paso manual pendiente del usuario (una sola vez): en GitHub → Settings → Pages,
-poner Source = "Deploy from a branch" → `gh-pages` / `/(root)`. La rama `gh-pages`
-la crea sola la propia Action en el primer PR.
+poner Source = **"GitHub Actions"**.
 
 ## Estado actual
 
