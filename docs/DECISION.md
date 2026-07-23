@@ -79,6 +79,14 @@ variables de entorno de Netlify — nunca se expone al cliente.
 Netlify + `@netlify/plugin-nextjs`. Git propio en esta carpeta, remoto:
 `https://github.com/abrinay1997-stack/Tienda_Bukoflow.git`.
 
+**Preview por PR (previo a Netlify):** `.github/workflows/preview.yml` publica un
+build estático (`next export`) en GitHub Pages por cada PR, con el link comentado
+automáticamente. No requiere cuenta de Netlify. Limitación: al ser export estático,
+`/api/chat` (Groq) no está disponible ahí — solo en Netlify o `npm run dev`.
+Paso manual pendiente del usuario (una sola vez): en GitHub → Settings → Pages,
+poner Source = "Deploy from a branch" → `gh-pages` / `/(root)`. La rama `gh-pages`
+la crea sola la propia Action en el primer PR.
+
 ## Estado actual
 
 - [x] Fase 0-1: decisión de ADN (este documento)
