@@ -55,7 +55,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
         <p className="font-mono text-mono uppercase tracking-[var(--tr-mono)] text-accent">
           {service.kicker}
         </p>
-        <h1 className="mt-3 font-display text-4xl font-light tracking-tight text-fg md:text-5xl">
+        <h1 className="mt-3 font-display text-3xl font-light tracking-tight text-fg">
           {service.title}
         </h1>
         <p className="mt-4 font-body text-lg text-muted">{service.headline}</p>
