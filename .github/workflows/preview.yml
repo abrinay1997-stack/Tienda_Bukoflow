@@ -1,0 +1,67 @@
+name: Preview (GitHub Pages)
+
+# Build estático del sitio y publica un link de previsualización por cada PR,
+# comentado automáticamente en el propio PR. No depende de Netlify ni de
+# ninguna cuenta externa: solo usa GitHub Pages + el GITHUB_TOKEN del repo.
+#
+# Limitación conocida: esta preview es 100% estática (next export), así que
+# la API route /api/chat (Groq) no está disponible aquí. El chatbot solo
+# funciona en Netlify (o `npm run dev`), donde sí hay servidor. Ver docs/DECISION.md.
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, closed]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: preview-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  preview:
+    if: github.event.action != 'closed'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build static export (sin /api — no soportado en export estático)
+        env:
+          STATIC_PREVIEW: '1'
+        run: |
+          mv src/app/api /tmp/api-backup
+          npm run build
+          mv /tmp/api-backup src/app/api
+
+      - name: Deploy preview to GitHub Pages
+        uses: rossjrw/pr-preview-action@v1
+        with:
+          source-dir: ./out
+          preview-branch: gh-pages
+          umbrella-dir: pr-preview
+
+  cleanup:
+    if: github.event.action == 'closed'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Remove preview
+        uses: rossjrw/pr-preview-action@v1
+        with:
+          preview-branch: gh-pages
+          umbrella-dir: pr-preview
+          action: remove
