@@ -101,3 +101,18 @@ body {
     transform: translate(0, 0);
   }
 }
+
+/* Scroll horizontal (testimonios): scrollbar delgado, coherente con el tema oscuro. */
+.snap-x {
+  scrollbar-width: thin;
+  scrollbar-color: var(--line) transparent;
+}
+
+.snap-x::-webkit-scrollbar {
+  height: 6px;
+}
+
+.snap-x::-webkit-scrollbar-thumb {
+  background-color: var(--line);
+  border-radius: var(--r-pill);
+}

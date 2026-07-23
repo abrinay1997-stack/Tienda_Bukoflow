@@ -4,6 +4,7 @@ import { CatalogIntro } from '@/components/CatalogIntro';
 import { Offers } from '@/components/Offers';
 import { PurchaseProcess } from '@/components/PurchaseProcess';
 import { Pricing } from '@/components/Pricing';
+import { Testimonials } from '@/components/Testimonials';
 
 export default function HomePage() {
   return (
@@ -15,6 +16,7 @@ export default function HomePage() {
         <Offers />
         <PurchaseProcess />
         <Pricing />
+        <Testimonials />
       </main>
     </>
   );
