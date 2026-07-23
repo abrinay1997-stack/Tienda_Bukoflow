@@ -1,0 +1,27 @@
+{
+  "brand": "bukoflow",
+  "family": "A",
+  "color": {
+    "bg": "#0a0a0a",
+    "surface": "#141414",
+    "fg": "#ededed",
+    "muted": "rgba(255,255,255,0.62)",
+    "line": "rgba(255,255,255,0.12)",
+    "accent": "#FF3D00",
+    "accent-fg": "#0a0a0a"
+  },
+  "type": {
+    "display": "Outfit",
+    "body": "Inter",
+    "utility": "JetBrains Mono",
+    "displayWeight": 200,
+    "heroScale": 0.85
+  },
+  "motion": {
+    "intensity": "high",
+    "smoothScroll": true,
+    "pageTransitions": false
+  },
+  "signature": "spotlight-sweep-player",
+  "sections": ["S01", "S02c", "S03", "S05", "S11", "S13", "S14", "S19", "S20"]
+}

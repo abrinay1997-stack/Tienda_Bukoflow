@@ -1,0 +1,54 @@
+@import '../styles/tokens.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+  Capa de tema (brand.json → CSS). Estos valores deben coincidir siempre
+  con brand.json — es la única fuente de verdad del color/tipografía de BUKOFLOW.
+*/
+:root {
+  --bg: #0a0a0a;
+  --surface: #141414;
+  --fg: #ededed;
+  --muted: rgba(255, 255, 255, 0.62);
+  --line: rgba(255, 255, 255, 0.12);
+  --accent: #ff3d00;
+  --accent-fg: #0a0a0a;
+}
+
+* {
+  border-color: var(--line);
+}
+
+*:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-body), sans-serif;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: var(--accent);
+  color: var(--accent-fg);
+  padding: var(--sp-3) var(--sp-4);
+  z-index: var(--z-overlay);
+  border-radius: var(--r-sm);
+  font-weight: 600;
+}
+
+.skip-link:focus {
+  left: var(--sp-4);
+  top: var(--sp-4);
+}

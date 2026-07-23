@@ -1,0 +1,298 @@
+{
+  "meta": {
+    "title": "BUKOFLOW | Comprar Beats Online: Trap, Reggaeton & Drill (Sin Tags)",
+    "description": "¿Buscas el sonido de tu próximo hit? Descarga beats de Trap, Reggaeton y Drill al instante. Licencias comerciales, archivos WAV + Stems y calidad de estudio. ¡Empieza a grabar hoy!",
+    "ogImage": ""
+  },
+  "hero": {
+    "kicker": "BUKOFLOW STORE",
+    "h1": "Tu Próximo Hit Comienza Aquí",
+    "sub": "Beats de Trap, Reggaeton y Drill con calidad de industria. Licencias inmediatas, sonido único.",
+    "cta": { "label": "Explorar Catálogo", "action": "scrollToPlayer" },
+    "secondaryCta": { "label": "Producción Musical a Medida", "href": "/produccion-musical" }
+  },
+  "catalogIntro": {
+    "h2": "Catálogo de Beats Urbanos",
+    "text": "Encuentra la base perfecta para tu letra. Disponemos de Instrumentales de Trap, Reggaeton, Drill y Hip Hop con sonido profesional. Al comprar tu licencia, recibirás acceso inmediato a archivos de alta fidelidad (WAV 24-bit y Trackouts/Stems), sin tags de voz y con derechos para uso comercial en Spotify y Apple Music."
+  },
+  "player": {
+    "provider": "beatstars",
+    "storeId": "77460",
+    "embedUrl": "https://player.beatstars.com/?storeId=77460",
+    "fallbackUrl": "https://www.beatstars.com/player/?storeId=77460"
+  },
+  "offers": [
+    { "title": "Compra 2, Llévate 1", "subtext": "Pack Inicial (3 Beats)" },
+    { "title": "Compra 3, Llévate 2", "subtext": "Pack Creador (5 Beats)", "highlight": true },
+    { "title": "Compra 4, Llévate 3", "subtext": "Pack Pro (7 Beats)" }
+  ],
+  "purchaseProcess": [
+    { "stage": "01", "title": "Selecciona ritmos y licencia", "text": "Explora el catálogo, selecciona tus ritmos y elige la licencia que mejor se adapte a tus necesidades." },
+    { "stage": "02", "title": "Finaliza la compra", "text": "Añade los productos al carrito y completa tu compra con PayPal o tarjeta de crédito." },
+    { "stage": "03", "title": "Revisa tu bandeja de entrada", "text": "Recibe tus archivos y licencia al instante por correo electrónico: listos para descargar y usar." }
+  ],
+  "licenses": [
+    {
+      "id": "basica",
+      "title": "Licencia Básica",
+      "price": "$39.95",
+      "features": [
+        "Beat en MP3 sin tag.",
+        "Uso para canciones, álbumes, eventos.",
+        "Sube a Spotify, iTunes, etc.",
+        "No requiere actualizar.",
+        "Se requiere acreditación."
+      ]
+    },
+    {
+      "id": "standard",
+      "title": "Licencia Standard",
+      "price": "$49.95",
+      "popular": true,
+      "features": [
+        "Beat en MP3 y WAV sin tag.",
+        "Uso para canciones, álbumes, eventos.",
+        "Sube a Spotify, iTunes, etc.",
+        "No requiere actualizar.",
+        "Se requiere acreditación."
+      ]
+    },
+    {
+      "id": "ilimitada",
+      "title": "Licencia Ilimitada",
+      "price": "$99.95",
+      "features": [
+        "MP3 + WAV + STEM.",
+        "Uso para canciones, álbumes, eventos.",
+        "Sube a Spotify, iTunes, etc.",
+        "Monetizar en YouTube.",
+        "Actuaciones en vivo.",
+        "Distribuir en TV y radio.",
+        "No requiere actualizar.",
+        "Se requiere acreditación."
+      ]
+    },
+    {
+      "id": "exclusiva",
+      "title": "Licencia Exclusiva",
+      "price": "$1,000.00",
+      "features": [
+        "MP3 + WAV + STEM.",
+        "Todo lo anterior + el beat es solo tuyo.",
+        "Nadie más lo podrá comprar.",
+        "No requiere actualizar.",
+        "Se requiere acreditación."
+      ]
+    }
+  ],
+  "services": [
+    {
+      "id": "mezcla",
+      "n": "01",
+      "title": "Mezcla",
+      "kicker": "Song Mixing by BUKOFLOW",
+      "headline": "Impacta con una mezcla profesional",
+      "price": "$70",
+      "purchaseUrl": "https://bukoflow.com/services/mezcla-131101",
+      "intro": [
+        "En BukoFlow, entendemos que una gran canción merece una mezcla de impacto que destaque por su sonido. Nuestro sistema de mezcla está diseñado para resaltar lo mejor de tu producción, con claridad, buenos balance y que se traduzca lo mejor posible en todos los dispositivos y plataformas.",
+        "¿Estás listo para transformar tus pistas en una mezcla que impacte? A continuación, te explicamos los requisitos y pasos para trabajar con nosotros."
+      ],
+      "steps": [
+        {
+          "title": "1. Preparación de las Pistas",
+          "text": "Para garantizar el mejor resultado, prepara y organiza tus pistas siguiendo estas indicaciones:",
+          "list": [
+            "Organiza tus pistas: Agrupa instrumentos y voces en categorías claras, como baterías, bajos, teclados, guitarras, voces principales, coros, etc.",
+            "Elimina efectos innecesarios: Exporta las pistas limpias, sin efectos de mezcla como reverbs, delays o compresores, a menos que sean esenciales para tu sonido.",
+            "Establece un punto de inicio común: Asegúrate de que todas las pistas comiencen desde el mismo punto (compás 1).",
+            "Especificaciones técnicas: Exporta tus archivos en formato WAV o AIFF, con 24 o 32 bits y una frecuencia de muestreo de 44.1 kHz o superior.",
+            "Documentación adicional: Incluye un archivo con los nombres de las pistas, referencias de mezcla y cualquier instrucción especial."
+          ]
+        },
+        { "title": "2. Envío de Materiales", "text": "Puedes enviarnos por WeTransfer, Google Drive o Dropbox. Todos los archivos deben estar bien etiquetados y organizados para evitar confusiones." },
+        { "title": "3. Proceso de Mezcla y Revisión", "text": "Tienes derecho a revisiones para asegurarnos de que el resultado final cumpla tus expectativas." },
+        { "title": "4. Entrega Final", "text": "Entregaremos tu mezcla en formato estéreo de alta calidad, lista para masterización o distribución en plataformas digitales." }
+      ],
+      "postDelivery": "Si después de recibir tu mezcla necesitas ajustes menores o tienes alguna duda, estaremos aquí para apoyarte."
+    },
+    {
+      "id": "mastering",
+      "n": "02",
+      "title": "Mastering",
+      "kicker": "Mastering by BUKOFLOW",
+      "headline": "Eleva tu sonido con una masterización estéreo profesional",
+      "price": "$30",
+      "purchaseUrl": "https://bukoflow.com/services/mastering-50627",
+      "intro": [
+        "En BukoFlow, sabemos que la masterización es el toque final que llevará tu música al máximo nivel. Nuestro servicio de masterización estéreo está diseñado para optimizar tu mezcla, logrando balance, claridad y un impacto que destaque en cualquier plataforma y sistema de reproducción.",
+        "¿Estás listo para darle a tu música el acabado profesional que merece? A continuación, te explicamos los requisitos y pasos para trabajar con nosotros."
+      ],
+      "steps": [
+        {
+          "title": "1. Preparación del Máster o Mezcla Final",
+          "text": "Para asegurar el mejor resultado, ten en cuenta estas recomendaciones al enviar tu mezcla:",
+          "list": [
+            "Nivel de salida: la mezcla no debe superar los 0dB, con margen dinámico preferiblemente con un peak máximo de -6dB.",
+            "Formato y resolución: exporta tu mezcla en formato WAV o AIFF, con 24 o 32 bits y una frecuencia de muestreo de 44.1 kHz o superior.",
+            "Referencias adicionales: si tienes canciones de referencia que representen el sonido que buscas, inclúyelas en el envío."
+          ]
+        },
+        { "title": "2. Envío de archivos", "text": "Envía tus archivos por WeTransfer, Google Drive o Dropbox, correctamente etiquetados y organizados." },
+        { "title": "3. Proceso de Masterización y Revisión", "text": "Te enviaremos una primera versión para que la escuches en diferentes sistemas de reproducción, con espacio para ajustes." },
+        { "title": "4. Entrega Final", "text": "Recibirás tu track masterizado en formato WAV a 24 bits, listo para distribución." }
+      ],
+      "postDelivery": "Si después de la entrega necesitas ajustes menores o tienes alguna duda, estaremos disponibles para ayudarte."
+    },
+    {
+      "id": "dolby-atmos",
+      "n": "03",
+      "title": "Mezcla Dolby Atmos",
+      "kicker": "Song Mixing by BUKOFLOW",
+      "headline": "Súbete al espacio inmersivo",
+      "price": null,
+      "purchaseUrl": "https://bukoflow.com/services/mezcla-dolby-atmos-143019",
+      "intro": [
+        "Las principales discográficas y plataformas como Apple Music, TIDAL y Amazon Music, entre otras, ahora exigen que las mezclas cumplan con los estándares de Dolby Atmos/Spatial Audio.",
+        "En BukoFlow, estamos certificados para llevar tu mezcla a los estándares de calidad que la industria requiere. Nuestro servicio de mezcla en Dolby Atmos está diseñado para brindarte una experiencia inmersiva en audio 3D."
+      ],
+      "steps": [
+        { "title": "1. Contacto", "text": "Escríbenos a través de nuestro formulario para discutir género musical, cantidad de pistas, revisiones requeridas y plazos. Comparte el máster estéreo ya masterizado en el mejor formato posible." },
+        {
+          "title": "2. Preparación de los Stems",
+          "text": "Para garantizar una mezcla fluida y de alta calidad, sigue estos pasos al preparar los stems:",
+          "list": [
+            "Organiza tus pistas: baterías, bajos, teclados, guitarras, voces principales, coros, etc.",
+            "Elimina efectos innecesarios salvo que sean esenciales para el sonido (indícalo en las notas)."
+          ]
+        },
+        { "title": "3. Establece un punto de inicio común", "text": "Todas las pistas deben comenzar en el mismo punto (compás 1). Exporta en 24 o 32 bits, 48 kHz o superior, con guía detallada de nombres e instrucciones especiales." },
+        { "title": "4. Envío de Materiales", "text": "WeTransfer, Google Drive o Dropbox, con archivos bien etiquetados y organizados." },
+        { "title": "5. Proceso de Mezcla y Revisión", "text": "Recibirás una primera versión para escuchar en distintos sistemas, con derecho a revisiones." },
+        { "title": "6. Entrega Final", "text": "Proyecto finalizado en formatos optimizados para Dolby Atmos, listo para Apple Music, TIDAL o Amazon Music." }
+      ],
+      "postDelivery": "Quedamos a tu disposición para resolver dudas o ajustes menores después de la entrega final."
+    },
+    {
+      "id": "beat-personalizado",
+      "n": "04",
+      "title": "Beat Personalizado",
+      "kicker": "Custom Beat by BUKOFLOW",
+      "headline": "Produce el ritmo perfecto para tu música",
+      "price": null,
+      "purchaseUrl": "https://bukoflow.com/services/beat-personalizado-50625",
+      "intro": [
+        "En BukoFlow, sabemos que cada artista tiene una visión única, y cuando no encuentras el beat perfecto, ¡nosotros lo creamos para ti! Nuestro proceso de producción está diseñado para adaptarse a tus necesidades y entregar un ritmo que cumpla exactamente con tus expectativas."
+      ],
+      "includes": [
+        "Un beat hecho a tu medida: trabajamos contigo hasta que estés 100% satisfecho con el resultado.",
+        "Cualquier género, cualquier estilo: Hip-Hop, Trap, R&B, Pop y más.",
+        "Derechos exclusivos: el ritmo que produzcamos será completamente tuyo, con todos los derechos exclusivos incluidos."
+      ],
+      "steps": [
+        {
+          "title": "1. Detalles creativos",
+          "list": [
+            "Estilo musical: Hip-Hop, Trap, R&B, u otro género de tu preferencia.",
+            "Estado de ánimo: ¿cómo quieres que se sienta tu canción?",
+            "Referencias: enlaces a canciones que describan el sonido que buscas."
+          ]
+        },
+        { "title": "2. Envío de la información", "text": "Envíanos todos los detalles a bukoflowpanama@gmail.com" },
+        { "title": "3. Producción y revisiones", "text": "Trabajaremos en tu beat y te enviaremos avances. Las revisiones son gratuitas." },
+        { "title": "4. Entrega final", "text": "Recibirás todos los tracks del beat en archivos de alta calidad, listo para grabar y mezclar con tus voces." }
+      ],
+      "postDelivery": "Si necesitas pequeños ajustes después de la entrega, estaremos aquí para ayudarte."
+    }
+  ],
+  "customMusic": {
+    "h1": "Producción Musical",
+    "intro": [
+      "¿Necesitas un beat exclusivo, música para un tráiler, un anuncio o tu videojuego? Estás en el lugar correcto.",
+      "Ofrezco servicios de producción, mezcla y masterización totalmente personalizados para llevar tu visión al siguiente nivel. Mi sonido se especializa en hip-hop cinematográfico, pero puedo adaptarme a cualquier género que necesites."
+    ],
+    "offered": [
+      "Producción de Beats Exclusivos",
+      "Música para Cine y Tráilers",
+      "Diseño de Sonido para Videojuegos",
+      "Mezcla y Masterización Profesional",
+      "Licencias a Medida"
+    ],
+    "closing": "Mi meta es potenciar tu visión con un sonido de alta calidad que deje una marca.",
+    "cta": { "label": "Contacta para una cotización", "href": "mailto:bukoflowpanama@gmail.com" },
+    "faq": [
+      { "q": "¿Cuál es el proceso para un pedido de música personalizada?", "a": "El proceso comienza con una consulta para entender tu visión. Luego, crearé un borrador para tu revisión. Una vez aprobado, completaré la producción, mezcla y masterización. Finalmente, recibirás los archivos finales listos para usar." },
+      { "q": "Pago Inicial del 50%", "a": "Una vez revisada y aprobada su solicitud, recibirá un presupuesto por correo electrónico. Para iniciar el proyecto, se requiere un pago inicial del 50% mediante PayPal o tarjeta de crédito." },
+      { "q": "¿Qué géneros musicales produces?", "a": "Mi especialidad es el hip-hop cinematográfico, pero tengo experiencia produciendo en una amplia variedad de géneros, incluyendo Lofi, Trap, Pop y música para bandas sonoras." },
+      { "q": "¿Cuánto tiempo toma recibir mi pedido?", "a": "El tiempo de entrega varía según la complejidad del proyecto. Un beat exclusivo puede tomar de 3 a 7 días, mientras que una banda sonora completa puede tomar más tiempo." },
+      { "q": "¿Soy propietario de la música una vez creada?", "a": "Tendrás derechos exclusivos para usar la pista personalizada con fines comerciales. Conservo el 50% de los derechos de publicación de las pistas personalizadas (salvo acuerdo contrario) y la producción no se revenderá ni se reutilizará. La cesión total de derechos está disponible bajo petición." }
+    ]
+  },
+  "testimonials": [
+    { "artist": "RichardLove", "spotifySrc": "https://open.spotify.com/embed/track/5tuxq8IrJspC0eCeB3aOTm?utm_source=generator" },
+    { "artist": "Avalon Davies", "spotifySrc": "https://open.spotify.com/embed/track/1y9mnArBtexJx9WUuoVKKK?utm_source=generator" },
+    { "artist": "RichardLove", "spotifySrc": "https://open.spotify.com/embed/track/6jnSWHSPerX58A6Rs7U7tJ?utm_source=generator" },
+    { "artist": "Abrinay", "spotifySrc": "https://open.spotify.com/embed/track/14anQ0yuu7PLwakdzleVsh?utm_source=generator" },
+    { "artist": "Abrinay", "spotifySrc": "https://open.spotify.com/embed/track/6oykdY0Ra3JsgSQjsytYpn?si=633d7b11b73a4bfd" },
+    { "artist": "Abrinay", "spotifySrc": "https://open.spotify.com/embed/track/7exDUiOuHPt51xdldD5Eql?si=e95a2086d3794fd5" }
+  ],
+  "faq": {
+    "general": [
+      { "q": "¿Se eliminarán todas las etiquetas de voz una vez que compre el Beat?", "a": "Sí, una vez que haya comprado el Beat, recibirá archivos sin etiqueta." },
+      { "q": "¿Qué métodos de pago aceptan?", "a": "Aceptamos PayPal y tarjetas de crédito." },
+      { "q": "¿Qué son los trackouts?", "a": "Trackouts o Stems son archivos de audio independientes: el bombo, la caja, el piano, etc., cada uno por separado. Se sugiere la licencia premium para una combinación de primer nivel." },
+      { "q": "¿Cómo se organizan los trackouts y los stems?", "a": "Las pistas están organizadas por carpetas: efectos y envíos en una carpeta, grupos de instrumentos en otra." },
+      { "q": "¿Cuáles son las ventajas de tener Track Outs?", "a": "Son ideales para mezclar y grabar en estudio: puedes editar la estructura como desees y conseguir un sonido más profesional." },
+      { "q": "¿Los ritmos ya están masterizados?", "a": "Con las licencias Basic y Standard recibirás los beats masterizados. Las licencias Ilimitada y Exclusiva incluyen masterizado, no masterizado y todas las pistas del proyecto por separado." },
+      { "q": "¿Cuál es su política de reembolso?", "a": "Todas las compras son definitivas y no se otorgarán reembolsos bajo ninguna circunstancia, ya que un activo digital descargado no puede revocarse." },
+      { "q": "¿Ha caducado su licencia?", "a": "No hay problema: puede actualizar su licencia para continuar usando el beat." },
+      { "q": "¿Qué pasa si el ritmo que quiero actualizar ya se vendió con una licencia exclusiva?", "a": "Ya no podrá actualizar su licencia, porque una vez vendida la licencia exclusiva no se permite la venta de ninguna otra licencia." },
+      { "q": "No encuentro el ritmo. ¿Qué le pasó?", "a": "Si se elimina un beat es porque se compraron sus derechos exclusivos y ya no puede revenderse." },
+      { "q": "¿Cómo obtengo mis beats?", "a": "La entrega es inmediata: luego del pago será redirigido a una pantalla desde la cual podrá descargar los beats y el contrato." }
+    ],
+    "licenses": [
+      { "q": "¿Cuál es la principal diferencia entre la Licencia Básica y la Standard?", "a": "La diferencia clave es la calidad del archivo de audio. La Básica da el beat en MP3; la Standard incluye MP3 y WAV de alta calidad, mejor para mezcla profesional." },
+      { "q": "Si quiero la mejor calidad de sonido para mi mezcla, ¿qué licencia debo elegir?", "a": "Para mejor calidad y flexibilidad recomendamos la Licencia Ilimitada o la Exclusiva, que incluyen los Stems." },
+      { "q": "¿Qué son los 'Stems' o 'Trackouts'?", "a": "Son los archivos de audio individuales que componen el beat completo: bombo, caja, bajo, piano, etc., cada uno en su propio archivo WAV." },
+      { "q": "¿Puedo usar un beat con Licencia Básica para una canción en Spotify o Apple Music?", "a": "Sí, todas nuestras licencias, incluida la Básica, permiten subir tu canción a plataformas de streaming." },
+      { "q": "¿Necesito una licencia especial para monetizar mi video en YouTube?", "a": "Sí, necesitas la Licencia Ilimitada o la Exclusiva. Básica y Standard no incluyen este derecho." },
+      { "q": "¿Qué significa que una licencia 'no requiere actualizar'?", "a": "Significa que la licencia es perpetua para los términos acordados, sin pagos de renovación." },
+      { "q": "¿Qué es la 'acreditación' y cómo debo hacerla?", "a": "Es dar crédito al productor: incluir 'Producido por BUKOFLOW' o '(Prod. BUKOFLOW)' en el título, descripción y metadatos." },
+      { "q": "Si compro una Licencia Exclusiva, ¿el beat es completamente mío?", "a": "Sí. Al comprarla, el beat se retira de la tienda y no se venderá a nadie más." },
+      { "q": "Compré una Licencia Básica pero ahora quiero los Stems. ¿Puedo actualizar?", "a": "Sí, puedes actualizar pagando la diferencia, siempre que el beat no se haya vendido como Exclusiva mientras tanto." },
+      { "q": "¿Qué pasa si compro una licencia y luego alguien más compra la Exclusiva para el mismo beat?", "a": "Tu licencia no exclusiva sigue siendo válida según sus términos, pero no podrás actualizarla una vez vendidos los derechos exclusivos." },
+      { "q": "¿Las licencias tienen un límite de reproducciones o ventas?", "a": "Básica, Standard e Ilimitada no tienen límite de streams o ventas. La Exclusiva tampoco." },
+      { "q": "¿Puedo usar los beats para actuaciones en vivo?", "a": "Sí, las licencias Ilimitada y Exclusiva otorgan ese derecho." },
+      { "q": "¿Y para la radio o la televisión?", "a": "Para radio comercial o televisión necesitas la Licencia Ilimitada o la Exclusiva." },
+      { "q": "¿Los beats vienen masterizados?", "a": "Básica y Standard: masterizados. Ilimitada y Exclusiva: masterizado, no masterizado y Stems." },
+      { "q": "¿Puedo registrar mi canción con Content ID de YouTube?", "a": "No con licencias no exclusivas, para evitar reclamaciones falsas a otros artistas. Solo con la Licencia Exclusiva." },
+      { "q": "¿Por qué la Licencia Exclusiva es mucho más cara?", "a": "Refleja el valor de la exclusividad total: ningún otro artista podrá usar ese beat, y se retira permanentemente de la tienda." },
+      { "q": "¿Qué licencia me recomiendan si estoy empezando?", "a": "La Licencia Standard es un excelente punto de partida: WAV de alta calidad a precio accesible." },
+      { "q": "¿Qué licencia es mejor para un artista establecido?", "a": "La Ilimitada, por los Stems y derechos de monetización, actuaciones y distribución. La Exclusiva garantiza un sonido único si el presupuesto lo permite." },
+      { "q": "¿El contrato de licencia es legalmente vinculante?", "a": "Sí. Recibirás un contrato en PDF junto con tus archivos de audio que detalla todos tus derechos y restricciones." },
+      { "q": "Si compro una licencia, ¿soy dueño de los derechos de autor del beat?", "a": "No, excepto con la Licencia Exclusiva. El productor retiene los derechos de autor de la composición; con la Exclusiva, los derechos de publicación suelen compartirse." }
+    ]
+  },
+  "nap": {
+    "address": "",
+    "phone": "",
+    "email": "bukoflowpanama@gmail.com",
+    "hours": [],
+    "maps": ""
+  },
+  "social": {
+    "instagram": "https://www.instagram.com/bukoflow/",
+    "youtube": "https://www.youtube.com/AbrinayStudios",
+    "tiktok": "https://www.tiktok.com/@bukoflow_?lang=es-419",
+    "website": "https://bukoflow.com/"
+  },
+  "tools": [
+    { "label": "Eleva tu Sonido (PRO)", "href": "https://academy.bukoflow.com/" },
+    { "label": "Eleva tu arte (Gratis)", "href": "https://artist.bukoflow.com/" }
+  ],
+  "legal": {
+    "company": "BUKOFLOW LLC",
+    "vat": "",
+    "privacyUrl": "/privacidad"
+  }
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BUKOFLOW | Comprar Beats Online: Trap, Reggaeton & Drill (Sin Tags)</title>
+    <meta name="description" content="¿Buscas el sonido de tu próximo hit? Descarga beats de Trap, Reggaeton y Drill al instante. Licencias comerciales, archivos WAV + Stems y calidad de estudio. ¡Empieza a grabar hoy!" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+      body {
+        font-family: 'Poppins', sans-serif;
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'primary-orange': '#FF3D00',
+              'dark-bg': '#000000',
+              'glass-border': 'rgba(255, 61, 0, 0.2)',
+              'card-bg': 'rgba(20, 20, 20, 0.9)',
+              'hover-glow': 'rgba(255, 61, 0, 0.3)',
+            },
+            animation: {
+              'float-logo': 'floatLogo 3s ease-in-out infinite',
+              'pulse-bg': 'pulseBackground 8s ease-in-out infinite',
+              'shimmer': 'shimmer 4s linear infinite',
+              'kenburns': 'kenburns 7s ease-out forwards',
+            },
+            keyframes: {
+              floatLogo: {
+                '0%, 100%': { transform: 'translateY(0px)' },
+                '50%': { transform: 'translateY(-10px)' },
+              },
+              pulseBackground: {
+                '0%, 100%': { opacity: 0.15, transform: 'scale(1)' },
+                '50%': { opacity: 0.25, transform: 'scale(1.05)' },
+              },
+              shimmer: {
+                '0%': { 'background-position': '-200% 0' },
+                '100%': { 'background-position': '200% 0' },
+              },
+              kenburns: {
+                '0%': { transform: 'scale(1.1)' },
+                '100%': { transform: 'scale(1)' },
+              },
+            }
+          }
+        }
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.29.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-dark-bg text-white">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
