@@ -43,6 +43,13 @@ const config: Config = {
         '3xl': 'var(--fs-3xl)',
         hero: 'var(--fs-hero)',
       },
+      zIndex: {
+        canvas: 'var(--z-canvas)',
+        content: 'var(--z-content)',
+        nav: 'var(--z-nav)',
+        cursor: 'var(--z-cursor)',
+        overlay: 'var(--z-overlay)',
+      },
     },
   },
   plugins: [],

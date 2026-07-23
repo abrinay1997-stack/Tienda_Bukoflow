@@ -11,6 +11,12 @@
     "cta": { "label": "Explorar Catálogo", "action": "scrollToPlayer" },
     "secondaryCta": { "label": "Producción Musical a Medida", "href": "/produccion-musical" }
   },
+  "nav": [
+    { "label": "Inicio", "href": "/" },
+    { "label": "Servicios", "href": "/servicios" },
+    { "label": "Producción Musical", "href": "/produccion-musical" },
+    { "label": "Ayuda", "href": "/ayuda" }
+  ],
   "catalogIntro": {
     "h2": "Catálogo de Beats Urbanos",
     "text": "Encuentra la base perfecta para tu letra. Disponemos de Instrumentales de Trap, Reggaeton, Drill y Hip Hop con sonido profesional. Al comprar tu licencia, recibirás acceso inmediato a archivos de alta fidelidad (WAV 24-bit y Trackouts/Stems), sin tags de voz y con derechos para uso comercial en Spotify y Apple Music."
