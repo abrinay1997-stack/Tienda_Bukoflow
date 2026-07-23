@@ -1,0 +1,267 @@
+{
+  "title": "Política de Privacidad",
+  "site": "https://bukoflow.com",
+  "effectiveDate": "8 de julio de 2024",
+  "intro": [
+    "https://bukoflow.com (\"el Sitio\", \"nosotros\", \"nos\" o \"nuestro\") nos comprometemos a proteger tu privacidad en línea. También nos comprometemos a ofrecerte la mejor experiencia posible en nuestro sitio web (el \"Sitio\"). Para mejorar tu experiencia en el Sitio, recopilamos cierta información personal sobre ti que nos ayuda a personalizar nuestro contenido según tus gustos y preferencias. Por favor, lee la siguiente Política de Privacidad para entender cómo se tratará tu información personal cuando hagas uso pleno de nuestro Sitio.",
+    "Operamos el Sitio y otros sitios y aplicaciones relacionados (el \"Servicio\").",
+    "Esta página te informa sobre nuestras políticas respecto a la recopilación, uso y divulgación de datos personales cuando usas nuestro Servicio, y sobre las opciones que tienes asociadas a esos datos.",
+    "Usamos tus datos para proporcionar y mejorar el Servicio. Al usar el Servicio, aceptas la recopilación y el uso de información de acuerdo con esta política. Salvo que se defina de otra manera en esta Política de Privacidad, los términos usados aquí tienen el mismo significado que en nuestros Términos y Condiciones."
+  ],
+  "sections": [
+    {
+      "heading": "Definiciones",
+      "items": [
+        { "term": "Datos Personales", "text": "Datos sobre una persona viva que puede ser identificada a partir de esos datos (o de esos datos junto con otra información que esté en nuestro poder o que probablemente llegue a estarlo)." },
+        { "term": "Datos de Uso", "text": "Datos recopilados automáticamente, generados por el uso del Servicio o por la propia infraestructura del Servicio (por ejemplo, la duración de la visita a una página)." },
+        { "term": "Cookies", "text": "Pequeños fragmentos de datos almacenados en el dispositivo de un usuario." },
+        { "term": "Responsable del Tratamiento", "text": "La persona que (sola o junto con otras) determina los fines y los medios del tratamiento de datos personales. A efectos de esta Política de Privacidad, nosotros somos el Responsable del Tratamiento de tus datos." },
+        { "term": "Encargado del Tratamiento (o Proveedores de Servicios)", "text": "Cualquier persona (distinta de un empleado del Responsable del Tratamiento) que trate los datos en nombre del Responsable del Tratamiento. Podemos usar los servicios de distintos Proveedores de Servicios para procesar tus datos de forma más eficaz." },
+        { "term": "Interesado", "text": "Cualquier persona viva que sea objeto de Datos Personales." },
+        { "term": "Usuario", "text": "La persona que usa nuestro Servicio. El Usuario corresponde al Interesado, que es el sujeto de los Datos Personales." }
+      ]
+    },
+    {
+      "heading": "Recopilación y Uso de Información",
+      "paragraphs": [
+        "Recopilamos varios tipos de información con distintos fines, para proporcionar y mejorar nuestro Servicio."
+      ]
+    },
+    {
+      "heading": "Tipos de Datos Recopilados",
+      "subsections": [
+        {
+          "subheading": "Datos Personales",
+          "paragraphs": [
+            "Mientras usas nuestro Servicio, podemos pedirte que nos proporciones cierta información de identificación personal que pueda usarse para contactarte o identificarte (\"Datos Personales\"). Esta información puede incluir, entre otros:"
+          ],
+          "list": ["Dirección de correo electrónico", "Nombre y apellido", "Número de teléfono", "Dirección, estado, provincia, código postal, ciudad", "Cookies y Datos de Uso"],
+          "paragraphsAfter": [
+            "Podemos usar tus Datos Personales para contactarte con boletines, materiales de marketing o promocionales, y otra información que pueda interesarte. Puedes optar por no recibir estas comunicaciones siguiendo el enlace de baja o las instrucciones incluidas en cualquier correo que te enviemos, o contactándonos."
+          ]
+        },
+        {
+          "subheading": "Datos de Uso",
+          "paragraphs": [
+            "También podemos recopilar información que tu navegador envía cada vez que visitas nuestro Servicio o cuando accedes al Servicio a través de un dispositivo móvil (\"Datos de Uso\").",
+            "Estos Datos de Uso pueden incluir información como la dirección IP de tu computadora, tipo y versión de navegador, las páginas de nuestro Servicio que visitas, la fecha y hora de tu visita, el tiempo que pasas en esas páginas, identificadores únicos de dispositivo y otros datos de diagnóstico.",
+            "Cuando accedes al Servicio desde un dispositivo móvil, estos Datos de Uso pueden incluir el tipo de dispositivo móvil, su identificador único, su dirección IP, el sistema operativo móvil, el tipo de navegador móvil, identificadores únicos de dispositivo y otros datos de diagnóstico."
+          ]
+        },
+        {
+          "subheading": "Datos de Ubicación",
+          "paragraphs": [
+            "Podemos usar y almacenar información sobre tu ubicación si nos das permiso para ello (\"Datos de Ubicación\"). Usamos estos datos para ofrecer funciones del Servicio y para mejorarlo y personalizarlo.",
+            "Puedes activar o desactivar los servicios de ubicación cuando uses el Servicio, en cualquier momento, desde la configuración de tu dispositivo."
+          ]
+        },
+        {
+          "subheading": "Datos de Cookies de Seguimiento",
+          "paragraphs": [
+            "Usamos cookies y tecnologías de seguimiento similares para rastrear la actividad en nuestro Servicio y almacenar cierta información.",
+            "Las cookies son archivos con una pequeña cantidad de datos que pueden incluir un identificador único anónimo. Las cookies se envían a tu navegador desde un sitio web y se almacenan en tu dispositivo. También usamos balizas, etiquetas y scripts para recopilar y rastrear información y para mejorar y analizar nuestro Servicio.",
+            "Puedes indicarle a tu navegador que rechace todas las cookies o que te avise cuando se esté enviando una cookie. Sin embargo, si no aceptas las cookies, es posible que no puedas usar algunas partes de nuestro Servicio.",
+            "Ejemplos de cookies que usamos:"
+          ],
+          "list": [
+            "Cookies de sesión. Las usamos para operar nuestro Servicio.",
+            "Cookies de preferencias. Las usamos para recordar tus preferencias y distintas configuraciones.",
+            "Cookies de seguridad. Las usamos con fines de seguridad."
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "Uso de los Datos",
+      "paragraphs": [
+        "Nuestro objetivo principal al recopilar información personal es ofrecerte, como usuario, una experiencia personalizada en nuestro Sitio. Usamos los datos recopilados para distintos fines, entre ellos:"
+      ],
+      "list": [
+        "Proporcionar y mantener nuestro Servicio",
+        "Notificarte sobre cambios en nuestro Servicio o actualizaciones de nuestro Sitio",
+        "Permitirte participar en funciones interactivas del Servicio cuando decidas hacerlo",
+        "Brindar atención al cliente",
+        "Recopilar análisis o información valiosa para poder mejorar nuestro Servicio",
+        "Monitorear el uso de nuestro Servicio, estimar el tamaño de nuestra audiencia y medir ciertos patrones de tráfico",
+        "Detectar, prevenir y resolver problemas técnicos",
+        "Ofrecerte noticias, ofertas especiales e información general sobre otros bienes, servicios y eventos similares a los que ya has adquirido o consultado, salvo que hayas decidido no recibir esa información",
+        "Ofrecer capacidades como personalización, comunicaciones interactivas, compras en línea y comunicación personalizada entre tú y los artistas de tu preferencia",
+        "Dar seguimiento al progreso y número de participaciones en nuestras promociones y concursos",
+        "Dar seguimiento a las visitas y a la actividad comercial realizada en nuestra tienda en línea",
+        "Contactarte en representación de ciertos artistas u otros terceros, entregar publicidad dirigida que pueda interesarte e información sobre eventos especiales relacionados con el Sitio y BeatStars Inc. (\"BeatStars\")"
+      ],
+      "paragraphsAfter": [
+        "Además, si consideramos que un usuario abusa del Sitio de cualquier forma, nos reservamos el derecho de compartir cierta información con terceros. Los abusos incluyen (sin limitarse a) posible infracción de derechos de autor, posible difamación, y posible fraude con tarjetas de crédito."
+      ]
+    },
+    {
+      "heading": "Cómo Compartimos los Datos",
+      "paragraphs": [
+        "No vendemos, alquilamos ni intercambiamos tu información personal con terceros. Sin embargo, cuando uno o más de nuestros socios comerciales copatrocinan un servicio, promoción y/o concurso, podemos compartir parte o toda la información recopilada en relación con ese servicio, promoción o concurso con el/los copatrocinador(es). Si no quieres que tu información se comparta, puedes optar por no usar ni registrarte en ese servicio, promoción o concurso en particular.",
+        "Además, cuando realizas una compra en nuestra tienda en línea, o te registras para recibir materiales promocionales nuestros, podemos compartir parte de tu información personal con terceros que nos ayudan a completar tu transacción o a enviarte los artículos a los que te suscribiste. Cuando compartimos tu información con esos terceros, trabajamos para asegurarnos de que solo se divulgue la información necesaria para completar tu transacción. Esta Política de Privacidad no aplica a dichos terceros."
+      ]
+    },
+    {
+      "heading": "Redes Sociales",
+      "paragraphs": [
+        "Si compartes nuestro contenido a través de redes sociales, por ejemplo dándonos \"me gusta\" en Facebook, siguiéndonos o mencionándonos en Twitter, o dándonos un \"+1\" en Google Plus, esas redes sociales registrarán que lo hiciste y podrían instalar una cookie para ese propósito.",
+        "En algunos casos, cuando una página de nuestro Sitio incluye contenido de una red social, como un feed de Twitter o una caja de comentarios de Facebook, esos servicios pueden instalar una cookie incluso cuando no hagas clic en ningún botón. Como ocurre con todas las cookies, nosotros no podemos acceder a las que instalan las redes sociales, así como esas redes sociales tampoco pueden acceder a las cookies que instalamos nosotros mismos."
+      ]
+    },
+    {
+      "heading": "Publicidad de Plataformas de Terceros",
+      "paragraphs": [
+        "Podemos compartir tu información con proveedores de plataformas de terceros (como Facebook, Google, Twitter y Datacrushers) para mostrarte anuncios/contenido dirigido a través de la plataforma de terceros correspondiente, según tu perfil/intereses. Tu información es usada por el proveedor de la plataforma de terceros para identificar tu cuenta y mostrarte anuncios."
+      ]
+    },
+    {
+      "heading": "Píxel de Conversión de Facebook",
+      "paragraphs": [
+        "Nuestro Sitio utiliza el servicio de Píxel de Conversión de Facebook. Esta herramienta nos permite seguir las acciones de los usuarios después de que son redirigidos al sitio de un proveedor al hacer clic en un anuncio de Facebook. Así podemos registrar la eficacia de los anuncios de Facebook con fines estadísticos y de investigación de mercado. Los datos recopilados permanecen anónimos y no podemos ver los datos personales de ningún usuario individual; sin embargo, los datos recopilados son guardados y procesados por Facebook. Facebook puede conectar estos datos con tu cuenta de Facebook y usarlos para sus propios fines publicitarios de acuerdo con su política, disponible en: https://www.facebook.com/about/privacy. Puedes revocar tu permiso aquí: https://www.facebook.com/ads/website_custom_audiences/."
+      ]
+    },
+    {
+      "heading": "Datacrushers",
+      "paragraphs": [
+        "Datacrushers es una plataforma de recuperación de ingresos y líder global en recuperación de carritos abandonados y aceleración de ingresos en todo el sitio. Los datos del carrito de compras y las direcciones de correo electrónico se comparten con ellos cuando el usuario ha dado su consentimiento para el Servicio. Estamos sujetos a sus términos y condiciones, disponibles en: https://www.datacrushers.com/terms-and-conditions."
+      ]
+    },
+    {
+      "heading": "YouTube",
+      "paragraphs": [
+        "Reconoces y aceptas que este Sitio utiliza los Servicios de la API de YouTube. Al acceder y/o usar el Sitio, aceptas los Términos de Servicio de YouTube y la Política de Privacidad de YouTube."
+      ]
+    },
+    {
+      "heading": "Conservación de Datos",
+      "paragraphs": [
+        "Conservaremos tus Datos Personales solo durante el tiempo que sea necesario para los fines establecidos en esta Política de Privacidad. Conservaremos y usaremos tus Datos Personales en la medida necesaria para cumplir con nuestras obligaciones legales (por ejemplo, si estamos obligados a conservar tus datos para cumplir con las leyes aplicables), resolver disputas y hacer cumplir nuestros acuerdos y políticas legales.",
+        "También conservaremos los Datos de Uso para fines de análisis interno. Los Datos de Uso generalmente se conservan por un período más corto, salvo que se usen para reforzar la seguridad o mejorar la funcionalidad de nuestro Servicio, o que estemos legalmente obligados a conservarlos por más tiempo."
+      ]
+    },
+    {
+      "heading": "Transferencia de Datos",
+      "paragraphs": [
+        "Tu información, incluidos los Datos Personales, puede ser transferida y mantenida en computadoras ubicadas fuera de tu estado, provincia, país u otra jurisdicción gubernamental, donde las leyes de protección de datos pueden diferir de las de tu jurisdicción.",
+        "Si te encuentras fuera de Estados Unidos y decides proporcionarnos información, ten en cuenta que transferimos los datos, incluidos los Datos Personales, a Estados Unidos y los procesamos allí.",
+        "Tu consentimiento a esta Política de Privacidad, seguido del envío de dicha información, representa tu conformidad con esa transferencia.",
+        "Tomaremos todas las medidas razonablemente necesarias para garantizar que tus datos sean tratados de forma segura y de acuerdo con esta Política de Privacidad, y no se realizará ninguna transferencia de tus Datos Personales a una organización o país a menos que existan controles adecuados, incluida la seguridad de tus datos y demás información personal."
+      ]
+    },
+    {
+      "heading": "Divulgación de Datos",
+      "subsections": [
+        {
+          "subheading": "Transacción Comercial",
+          "paragraphs": ["Si estamos involucrados en una fusión, adquisición o venta de activos, tus Datos Personales podrían ser transferidos. Te avisaremos antes de que tus Datos Personales sean transferidos y queden sujetos a una Política de Privacidad diferente."]
+        },
+        {
+          "subheading": "Divulgación para Aplicación de la Ley",
+          "paragraphs": ["Bajo ciertas circunstancias, nosotros y/o BeatStars podemos vernos obligados a divulgar tus Datos Personales si así lo exige la ley o en respuesta a solicitudes válidas de autoridades públicas (por ejemplo, un tribunal o una agencia gubernamental)."]
+        },
+        {
+          "subheading": "Requisitos Legales",
+          "paragraphs": ["Podemos divulgar tus Datos Personales de buena fe, creyendo que dicha acción es necesaria para:"],
+          "list": [
+            "Cumplir con una obligación legal",
+            "Proteger y defender nuestros derechos o propiedad",
+            "Prevenir o investigar posibles irregularidades relacionadas con el Servicio",
+            "Proteger la seguridad personal de los usuarios del Servicio o del público",
+            "Protegernos frente a responsabilidad legal"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "Seguridad de los Datos",
+      "paragraphs": [
+        "La seguridad de tus datos es importante para nosotros, pero recuerda que ningún método de transmisión por Internet ni de almacenamiento electrónico es 100% seguro. Aunque nos esforzamos por usar medios comercialmente aceptables para proteger tus Datos Personales, no podemos garantizar su seguridad absoluta."
+      ]
+    },
+    {
+      "heading": "Señales de \"No Rastrear\" (Do Not Track)",
+      "paragraphs": [
+        "No admitimos las señales de \"No Rastrear\" (DNT, por sus siglas en inglés). \"No Rastrear\" es una preferencia que puedes configurar en tu navegador para informar a los sitios web que no deseas ser rastreado.",
+        "Puedes activar o desactivar \"No Rastrear\" visitando la página de Preferencias o Configuración de tu navegador."
+      ]
+    },
+    {
+      "heading": "Tus Derechos",
+      "paragraphs": [
+        "Buscamos tomar medidas razonables para permitirte corregir, modificar, eliminar o limitar el uso de tus Datos Personales.",
+        "Siempre que sea posible, puedes actualizar tus Datos Personales directamente en la sección de configuración de tu cuenta. Si no puedes cambiar tus Datos Personales, contáctanos para hacer los cambios necesarios.",
+        "Si deseas saber qué Datos Personales tenemos sobre ti y quieres que se eliminen de nuestros sistemas, contáctanos en abrinaystudios@gmail.com con tu solicitud específica.",
+        "En ciertas circunstancias, tienes derecho a:"
+      ],
+      "list": [
+        "Acceder y recibir una copia de los Datos Personales que tenemos sobre ti",
+        "Rectificar cualquier Dato Personal inexacto que tengamos sobre ti",
+        "Solicitar la eliminación de los Datos Personales que tenemos sobre ti"
+      ],
+      "paragraphsAfter": [
+        "Tienes derecho a la portabilidad de la información que nos proporcionas. Puedes solicitar una copia de tus Datos Personales en un formato electrónico de uso común para poder gestionarlos y transferirlos.",
+        "Ten en cuenta que podemos pedirte que verifiques tu identidad antes de responder a este tipo de solicitudes."
+      ]
+    },
+    {
+      "heading": "Proveedores de Servicios",
+      "paragraphs": [
+        "Podemos emplear empresas y personas terceras para facilitar nuestro Servicio (\"Proveedores de Servicios\"), para prestar el Servicio en nuestro nombre, realizar servicios relacionados con el Servicio o ayudarnos a analizar cómo se usa nuestro Servicio.",
+        "Estos terceros solo tienen acceso a tus Datos Personales para realizar estas tareas en nuestro nombre, y están obligados a no divulgarlos ni usarlos para ningún otro propósito."
+      ]
+    },
+    {
+      "heading": "Analítica",
+      "subsections": [
+        {
+          "subheading": "Google Analytics",
+          "paragraphs": [
+            "Google Analytics es un servicio de análisis web ofrecido por Google que rastrea y reporta el tráfico del sitio web. Google usa los datos recopilados para rastrear y monitorear el uso de nuestro Servicio. Estos datos se comparten con otros servicios de Google. Google puede usar los datos recopilados para contextualizar y personalizar los anuncios de su propia red publicitaria.",
+            "Para más información sobre las prácticas de privacidad de Google, visita: https://www.google.com/intl/en/policies/privacy/"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "Pagos",
+      "paragraphs": [
+        "Podemos ofrecer productos y/o servicios pagos dentro del Servicio. En ese caso, usamos servicios de terceros para el procesamiento de pagos (por ejemplo, procesadores de pago).",
+        "No almacenaremos ni recopilaremos los datos de tu tarjeta de pago. Esa información se proporciona directamente a nuestros procesadores de pago externos, cuyo uso de tu información personal se rige por su propia Política de Privacidad. Estos procesadores de pago cumplen con los estándares establecidos por PCI-DSS, gestionados por el PCI Security Standards Council, un esfuerzo conjunto de marcas como Visa, Mastercard, American Express y Discover. Los requisitos de PCI-DSS ayudan a garantizar el manejo seguro de la información de pago.",
+        "Los procesadores de pago con los que trabajamos son:"
+      ],
+      "list": [
+        "PayPal o Braintree — su Política de Privacidad puede consultarse en https://www.paypal.com/webapps/mpp/ua/privacy-full",
+        "Stripe — su Política de Privacidad puede consultarse en https://stripe.com/us/privacy"
+      ]
+    },
+    {
+      "heading": "Enlaces a Otros Sitios Web",
+      "paragraphs": [
+        "Nuestro Servicio puede contener enlaces a otros sitios web que no son operados por nosotros. Si haces clic en un enlace de un tercero, serás dirigido al sitio web de ese tercero. Te recomendamos encarecidamente revisar la Política de Privacidad de cada sitio que visites.",
+        "No tenemos control ni asumimos responsabilidad alguna por el contenido, las políticas de privacidad o las prácticas de sitios web o servicios de terceros."
+      ]
+    },
+    {
+      "heading": "Privacidad de Menores",
+      "paragraphs": [
+        "Nuestro Servicio no está dirigido a personas menores de 18 años (\"Menores\").",
+        "No recopilamos a sabiendas información de identificación personal de personas menores de 18 años. Si eres madre, padre o tutor y sabes que tu hijo o hija nos ha proporcionado Datos Personales, contáctanos en abrinaystudios@gmail.com. Si nos damos cuenta de que hemos recopilado Datos Personales de menores sin verificación del consentimiento parental, tomaremos medidas para eliminar esa información de nuestros servidores."
+      ]
+    },
+    {
+      "heading": "Cambios a esta Política de Privacidad",
+      "paragraphs": [
+        "Podemos actualizar nuestra Política de Privacidad de vez en cuando. Te notificaremos cualquier cambio publicando la nueva Política de Privacidad en esta página.",
+        "Te avisaremos por correo electrónico y/o mediante un aviso visible en nuestro Servicio, antes de que el cambio entre en vigor, y actualizaremos la \"fecha de vigencia\" al inicio de esta Política de Privacidad.",
+        "Te recomendamos revisar esta Política de Privacidad periódicamente para estar al tanto de cualquier cambio. Los cambios a esta Política de Privacidad entran en vigor en el momento en que se publican en esta página."
+      ]
+    },
+    {
+      "heading": "Contáctanos",
+      "paragraphs": [
+        "Si tienes alguna pregunta sobre esta Política de Privacidad, contáctanos:"
+      ],
+      "list": ["Por correo electrónico: bukoflowpanama@gmail.com"]
+    }
+  ]
+}
