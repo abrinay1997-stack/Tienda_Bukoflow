@@ -1,6 +1,7 @@
 import { Nav } from '@/components/Nav';
 import { Hero } from '@/components/Hero';
 import { CatalogIntro } from '@/components/CatalogIntro';
+import { Offers } from '@/components/Offers';
 
 export default function HomePage() {
   return (
@@ -9,6 +10,7 @@ export default function HomePage() {
       <main id="main">
         <Hero />
         <CatalogIntro />
+        <Offers />
       </main>
     </>
   );
