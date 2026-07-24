@@ -2,9 +2,14 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import content from '@/content/content.json';
 
-export function Nav() {
+type NavProps = {
+  navItems: { label: string; href: string }[];
+  services: { id: string; title: string }[];
+  tools: { label: string; href: string }[];
+};
+
+export function Nav({ navItems, services, tools }: NavProps) {
   const [open, setOpen] = useState(false);
 
   // Cierra el menú móvil con Escape, sin importar dónde esté el foco.
@@ -32,7 +37,7 @@ export function Nav() {
         </Link>
 
         <ul className="hidden items-center gap-8 md:flex">
-          {content.nav.map((item) =>
+          {navItems.map((item) =>
             item.href === '/servicios' ? (
               <li key={item.href} className="group relative">
                 <button
@@ -50,7 +55,7 @@ export function Nav() {
                   </svg>
                 </button>
                 <ul className="invisible absolute left-0 top-full mt-2 w-56 rounded-[var(--r-sm)] border border-line bg-surface py-1 opacity-0 shadow-xl transition-opacity duration-200 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
-                  {content.services.map((service) => (
+                  {services.map((service) => (
                     <li key={service.id}>
                       <Link
                         href={`/servicios/${service.id}`}
@@ -89,7 +94,7 @@ export function Nav() {
               </svg>
             </button>
             <ul className="invisible absolute right-0 top-full mt-2 w-56 rounded-[var(--r-sm)] border border-line bg-surface py-1 opacity-0 shadow-xl transition-opacity duration-200 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
-              {content.tools.map((tool) => (
+              {tools.map((tool) => (
                 <li key={tool.href}>
                   <a
                     href={tool.href}
@@ -138,12 +143,12 @@ export function Nav() {
         className={`border-t border-line bg-bg md:hidden ${open ? 'block' : 'hidden'}`}
       >
         <ul className="flex flex-col px-[var(--gutter)] py-4">
-          {content.nav.map((item) =>
+          {navItems.map((item) =>
             item.href === '/servicios' ? (
               <li key={item.href}>
                 <span className="block pt-3 font-body text-base text-fg">{item.label}</span>
                 <ul className="pl-4">
-                  {content.services.map((service) => (
+                  {services.map((service) => (
                     <li key={service.id}>
                       <Link
                         href={`/servicios/${service.id}`}
@@ -168,7 +173,7 @@ export function Nav() {
               </li>
             )
           )}
-          {content.tools.map((tool) => (
+          {tools.map((tool) => (
             <li key={tool.href}>
               <a
                 href={tool.href}

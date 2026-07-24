@@ -17,7 +17,13 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <main id="main">
-      <Hero />
+      <Hero
+        kicker={content.hero.kicker}
+        h1={content.hero.h1}
+        sub={content.hero.sub}
+        ctaLabel={content.hero.cta.label}
+        secondaryCta={content.hero.secondaryCta}
+      />
       <Player />
       <CatalogIntro />
       <Offers />

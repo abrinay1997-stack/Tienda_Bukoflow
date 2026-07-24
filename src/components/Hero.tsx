@@ -1,9 +1,16 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
-import content from '@/content/content.json';
 
-export function Hero() {
+type HeroProps = {
+  kicker: string;
+  h1: string;
+  sub: string;
+  ctaLabel: string;
+  secondaryCta: { label: string; href: string };
+};
+
+export function Hero({ kicker, h1, sub, ctaLabel, secondaryCta }: HeroProps) {
   const h1Ref = useRef<HTMLHeadingElement>(null);
 
   useEffect(() => {
@@ -52,24 +59,24 @@ export function Hero() {
 
       <div className="relative z-content mx-auto flex max-w-[var(--container)] flex-col items-center gap-8 text-center">
         <p className="font-mono text-mono uppercase tracking-[var(--tr-mono)] text-accent">
-          {content.hero.kicker}
+          {kicker}
         </p>
 
         <h1
           ref={h1Ref}
           className="font-display text-[clamp(2.5rem,1.2rem+7vw,7rem)] font-light leading-[var(--lh-tight)] tracking-tight text-fg"
         >
-          {content.hero.h1}
+          {h1}
         </h1>
 
-        <p className="max-w-[var(--measure)] font-body text-lg text-muted">{content.hero.sub}</p>
+        <p className="max-w-[var(--measure)] font-body text-lg text-muted">{sub}</p>
 
         <div className="flex flex-col items-center gap-4 sm:flex-row">
           <button type="button" onClick={scrollToPlayer} className="btn-primary">
-            {content.hero.cta.label}
+            {ctaLabel}
           </button>
-          <a href={content.hero.secondaryCta.href} className="btn-ghost">
-            {content.hero.secondaryCta.label}
+          <a href={secondaryCta.href} className="btn-ghost">
+            {secondaryCta.label}
           </a>
         </div>
       </div>
