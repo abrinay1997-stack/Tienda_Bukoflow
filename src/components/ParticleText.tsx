@@ -6,8 +6,10 @@ type Particle = { x: number; y: number; tx: number; ty: number };
 
 const PARTICLE_STEP = 3;
 const PARTICLE_SIZE = 1.6;
-const EASE = 0.12;
-const SCATTER = 48;
+const EASE = 0.1;
+const SCATTER_MIN = 90;
+const SCATTER_RANGE = 110;
+const SETTLE_THRESHOLD = 0.004;
 
 export function ParticleText({
   as,
@@ -21,6 +23,7 @@ export function ParticleText({
   const textRef = useRef<HTMLHeadingElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [skip, setSkip] = useState(true);
+  const [solid, setSolid] = useState(false);
 
   useEffect(() => {
     setSkip(window.matchMedia('(prefers-reduced-motion: reduce)').matches);
@@ -101,7 +104,7 @@ export function ParticleText({
             const tx = x / dpr;
             const ty = y / dpr;
             const angle = Math.random() * Math.PI * 2;
-            const dist = SCATTER + Math.random() * SCATTER;
+            const dist = SCATTER_MIN + Math.random() * SCATTER_RANGE;
             pts.push({
               tx,
               ty,
@@ -120,16 +123,20 @@ export function ParticleText({
     const render = () => {
       progress += (target - progress) * EASE;
       ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.globalAlpha = 0.3 + 0.7 * progress;
       ctx.fillStyle = getComputedStyle(textEl).color;
       for (const p of particles) {
         const x = p.x + (p.tx - p.x) * progress;
         const y = p.y + (p.ty - p.y) * progress;
         ctx.fillRect(x, y, PARTICLE_SIZE, PARTICLE_SIZE);
       }
-      if (Math.abs(progress - target) > 0.003) {
+      canvas.style.filter = progress < 0.97 ? `blur(${(1 - progress) * 2.5}px)` : '';
+      if (Math.abs(progress - target) > SETTLE_THRESHOLD) {
         raf = requestAnimationFrame(render);
       } else {
         raf = 0;
+        progress = target;
+        if (target === 1) setSolid(true);
       }
     };
 
@@ -139,7 +146,9 @@ export function ParticleText({
 
     const observer = new IntersectionObserver(
       ([entry]) => {
-        target = entry.isIntersecting ? 1 : 0;
+        const entering = entry.isIntersecting;
+        target = entering ? 1 : 0;
+        if (!entering) setSolid(false);
         startLoop();
       },
       { threshold: 0.3 }
@@ -160,11 +169,22 @@ export function ParticleText({
     <div className="relative">
       {createElement(
         as,
-        { ref: textRef, className: `${className ?? ''} ${skip ? '' : 'opacity-0'}`.trim() },
+        {
+          ref: textRef,
+          className: `${className ?? ''} ${
+            skip ? '' : `transition-opacity duration-300 ${solid ? 'opacity-100' : 'opacity-0'}`
+          }`.trim(),
+        },
         children
       )}
       {!skip && (
-        <canvas ref={canvasRef} aria-hidden="true" className="pointer-events-none absolute inset-0" />
+        <canvas
+          ref={canvasRef}
+          aria-hidden="true"
+          className={`pointer-events-none absolute inset-0 transition-opacity duration-300 ${
+            solid ? 'opacity-0' : 'opacity-100'
+          }`}
+        />
       )}
     </div>
   );
