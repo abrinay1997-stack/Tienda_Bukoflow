@@ -2,7 +2,6 @@ import type { Metadata } from 'next';
 import content from '@/content/content.json';
 import { CheckIcon } from '@/components/Icons';
 import { RevealGroup, RevealItem } from '@/components/RevealGroup';
-import { ParticleText } from '@/components/ParticleText';
 
 export const metadata: Metadata = {
   title: 'Licencias',
@@ -14,9 +13,9 @@ export default function LicenciasPage() {
   return (
     <main id="main" className="px-[var(--gutter)] pb-[var(--section-y)] pt-32">
       <div className="mx-auto max-w-[var(--container)]">
-        <ParticleText as="h1" className="text-center font-display text-3xl font-light tracking-tight text-fg">
+        <h1 className="text-center font-display text-3xl font-light tracking-tight text-fg">
           Licencias
-        </ParticleText>
+        </h1>
         <p className="mx-auto mt-4 max-w-[var(--measure)] text-center font-body text-lg text-muted">
           Elige cómo vas a usar el beat. ¿No estás seguro? Revisa la{' '}
           <a href="/ayuda" className="text-accent hover:underline">
@@ -25,7 +24,7 @@ export default function LicenciasPage() {
           .
         </p>
 
-        <RevealGroup immediate>
+        <RevealGroup>
           <ul className="mt-16 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {content.licenses.map((license) => (
               <RevealItem

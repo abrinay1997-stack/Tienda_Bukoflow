@@ -3,7 +3,6 @@ import { notFound } from 'next/navigation';
 import content from '@/content/content.json';
 import { Reveal } from '@/components/Reveal';
 import { RevealGroup, RevealItem } from '@/components/RevealGroup';
-import { ParticleText } from '@/components/ParticleText';
 
 export const dynamicParams = false;
 
@@ -60,9 +59,9 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
           <p className="font-mono text-mono uppercase tracking-[var(--tr-mono)] text-accent">
             {service.kicker}
           </p>
-          <ParticleText as="h1" className="mt-3 font-display text-3xl font-light tracking-tight text-fg">
+          <h1 className="mt-3 font-display text-3xl font-light tracking-tight text-fg">
             {service.title}
-          </ParticleText>
+          </h1>
           <p className="mt-4 font-body text-lg text-muted">{service.headline}</p>
 
           <div className="mt-10 space-y-4 font-body text-base leading-[var(--lh-body)] text-muted">
@@ -94,9 +93,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
           <ol className="mt-12 space-y-8 border-t border-line pt-8">
             {service.steps.map((step) => (
               <RevealItem key={step.title}>
-                <ParticleText as="h2" className="font-display text-lg font-medium text-fg">
-                  {step.title}
-                </ParticleText>
+                <h2 className="font-display text-lg font-medium text-fg">{step.title}</h2>
                 {'text' in step && step.text && (
                   <p className="mt-2 font-body text-sm text-muted">{step.text}</p>
                 )}
