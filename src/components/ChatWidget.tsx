@@ -7,7 +7,7 @@ type ChatMessage = { role: 'user' | 'assistant'; text: string };
 
 const GREETING: ChatMessage = {
   role: 'assistant',
-  text: '¡Hola! Soy el asistente de BUKOFLOW. Pregúntame sobre licencias, servicios o precios.',
+  text: '¡Hola! Soy BUKOFLOW. Pregúntame sobre licencias, servicios o precios.',
 };
 
 export function ChatWidget() {
@@ -22,7 +22,8 @@ export function ChatWidget() {
     const text = input.trim();
     if (!text || loading) return;
 
-    setMessages((prev) => [...prev, { role: 'user', text }]);
+    const nextMessages: ChatMessage[] = [...messages, { role: 'user', text }];
+    setMessages(nextMessages);
     setInput('');
     setLoading(true);
 
@@ -30,7 +31,7 @@ export function ChatWidget() {
       const res = await fetch('/api/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ message: text }),
+        body: JSON.stringify({ messages: nextMessages }),
       });
       if (!res.ok) throw new Error('respuesta no válida');
       const data = await res.json();
@@ -43,7 +44,7 @@ export function ChatWidget() {
         ...prev,
         {
           role: 'assistant',
-          text: `El asistente no está disponible en este momento. Escríbenos directamente a ${content.nap.email}.`,
+          text: `BUKOFLOW no está disponible en este momento. Escríbenos directamente a ${content.nap.email}.`,
         },
       ]);
     } finally {
@@ -58,7 +59,7 @@ export function ChatWidget() {
         onClick={() => setOpen((v) => !v)}
         aria-expanded={open}
         aria-controls={panelId}
-        aria-label={open ? 'Cerrar asistente' : 'Abrir asistente de BUKOFLOW'}
+        aria-label={open ? 'Cerrar chat de BUKOFLOW' : 'Abrir chat de BUKOFLOW'}
         className="fixed bottom-6 right-6 z-overlay flex h-14 w-14 items-center justify-center rounded-full bg-accent text-accent-fg shadow-2xl transition-transform duration-[var(--d-fast)] hover:scale-105 active:scale-95"
       >
         {open ? (
@@ -80,11 +81,11 @@ export function ChatWidget() {
         <div
           id={panelId}
           role="dialog"
-          aria-label="Asistente de BUKOFLOW"
+          aria-label="Chat de BUKOFLOW"
           className="fixed bottom-24 right-6 z-overlay flex h-[480px] w-[min(360px,calc(100vw-3rem))] flex-col overflow-hidden rounded-[var(--r-sm)] border border-line bg-surface shadow-2xl"
         >
           <div className="border-b border-line px-4 py-3">
-            <p className="font-display text-sm font-medium text-fg">Asistente BUKOFLOW</p>
+            <p className="font-display text-sm font-medium text-fg">BUKOFLOW</p>
           </div>
 
           <div className="flex-1 space-y-3 overflow-y-auto px-4 py-3" aria-live="polite">
