@@ -100,6 +100,21 @@ body {
     animation: none;
     transform: translate(0, 0);
   }
+
+  /*
+    Red de seguridad global: cualquier transition/animation que algún
+    componente haya escrito con una duración fija (no ligada a --d-fast)
+    también se anula aquí, en vez de depender de que cada autor recuerde
+    usar los tokens de movimiento.
+  */
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 /* Scroll horizontal (testimonios): scrollbar delgado, coherente con el tema oscuro. */

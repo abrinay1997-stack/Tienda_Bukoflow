@@ -76,7 +76,7 @@ export function Nav() {
 
         <button
           type="button"
-          className="p-2 text-fg md:hidden"
+          className="flex h-11 w-11 items-center justify-center text-fg md:hidden"
           aria-expanded={open}
           aria-controls="mobile-nav"
           aria-label={open ? 'Cerrar menú' : 'Abrir menú'}
