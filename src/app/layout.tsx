@@ -3,6 +3,7 @@ import { Outfit, Inter, JetBrains_Mono } from 'next/font/google';
 import content from '@/content/content.json';
 import { Nav } from '@/components/Nav';
 import { Footer } from '@/components/Footer';
+import { ChatWidget } from '@/components/ChatWidget';
 import { SITE_URL } from '@/lib/site';
 import './globals.css';
 
@@ -71,6 +72,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Nav />
         {children}
         <Footer />
+        <ChatWidget />
       </body>
     </html>
   );
