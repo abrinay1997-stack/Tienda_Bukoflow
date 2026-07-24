@@ -57,9 +57,9 @@ Páginas propias (S22): `/servicios/mezcla`, `/servicios/mastering`,
 
 ## 5. Signature
 
-**Spotlight sweep sobre el reproductor** — el "producto" de BUKOFLOW es el beat, no
-un objeto físico. En vez del giro 3D de la Familia A original (portfolio8), el haz de
-luz recorre el reproductor de BeatStars en el hero.
+~~Spotlight sweep sobre el reproductor~~ — **reemplazada, ver §9.** El signature
+actual es un campo de partículas 3D reactivo en el Hero (el spotlight 2D queda como
+fallback para dispositivos débiles / `prefers-reduced-motion`).
 
 ## 6. Arquitectura
 
@@ -92,6 +92,19 @@ solo en Netlify o `npm run dev`.
 
 Paso manual pendiente del usuario (una sola vez): en GitHub → Settings → Pages,
 poner Source = **"GitHub Actions"**.
+
+## 9. Excepciones al ADN pedidas explícitamente por el cliente (2026-07-23)
+
+El cliente pidió una dirección más inmersiva de lo que marca el genoma por defecto.
+Se registran aquí las reglas que se rompen a propósito, y por qué:
+
+| Regla del ADN | Excepción | Motivo |
+|---|---|---|
+| §0 "un solo acento cromático" / una sola librería de animación | Se suma **framer-motion** encima de GSAP, ya instalado | El cliente pidió framer-motion explícitamente tras conocer el riesgo de duplicar librerías (dos formas de animar el mismo sitio). Mitigado con `LazyMotion` (carga diferida, ~15KB) — sin esto el bundle de la home subía a 150KB, por encima del presupuesto. |
+| §16.1 "un momento orquestado por sitio" | El Hero tiene spotlight/partículas 3D **y** las tarjetas de Testimonios tienen su propio efecto 3D de abanico | El cliente prefirió recuperar el efecto 3D original de Testimonios explícitamente, sobre la recomendación de mantener un único momento. Ambos usan solo `transform`/`opacity`, respetan `prefers-reduced-motion`. |
+| §8.3 "3D... solo si aporta" (Familia A: objeto de producto) | Se usa 3D real (Three.js) en un sitio sin objeto físico que mostrar | Decisión del cliente tras comparar alternativas (vinilo, ecualizador, shader abstracto, partículas). Partículas elegidas por ser la opción más ligera en rendimiento. |
+| Herramientas de terceros no verificadas | Se descartó instalar el skill `ui-ux-pro-max-skill` de GitHub | La verificación automática devolvió cifras de estrellas/forks implausibles (indicio de alucinación o mal fetch) — no se pudo confirmar que fuera seguro. Se prefirió construir el diseño directamente. |
+| — | Se instaló el MCP **Magic** (`@21st-dev/magic`), scope de usuario, con API key del cliente | Paquete real y verificado de 21st.dev. Configurado fuera de este repo (`~/.claude.json`), la key nunca se commitea. |
 
 ## Estado actual
 

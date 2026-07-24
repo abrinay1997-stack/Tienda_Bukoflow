@@ -22,6 +22,6 @@
     "smoothScroll": true,
     "pageTransitions": false
   },
-  "signature": "spotlight-sweep-player",
+  "signature": "particle-field-hero",
   "sections": ["S01", "S02c", "S03", "S05", "S11", "S13", "S14", "S19", "S20"]
 }
