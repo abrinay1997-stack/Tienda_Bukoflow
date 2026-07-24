@@ -2,16 +2,19 @@ import content from '@/content/content.json';
 import { CheckIcon } from './Icons';
 import { SectionHeading } from './SectionHeading';
 import { Reveal } from './Reveal';
+import { RevealGroup, RevealItem } from './RevealGroup';
 
 export function Pricing() {
   return (
     <section className="px-[var(--gutter)] py-[var(--section-y)]">
-      <Reveal>
-        <div className="mx-auto max-w-[var(--container)]">
+      <div className="mx-auto max-w-[var(--container)]">
+        <Reveal>
           <SectionHeading kicker="Licencias" title="Elige cómo vas a usar el beat" />
+        </Reveal>
+        <RevealGroup>
           <ul className="mt-16 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {content.licenses.map((license) => (
-              <li
+              <RevealItem
                 key={license.id}
                 className={`relative flex flex-col rounded-[var(--r-sm)] border p-6 ${
                   license.popular ? 'border-accent bg-accent/5 lg:scale-105' : 'border-line bg-surface'
@@ -34,11 +37,11 @@ export function Pricing() {
                     </li>
                   ))}
                 </ul>
-              </li>
+              </RevealItem>
             ))}
           </ul>
-        </div>
-      </Reveal>
+        </RevealGroup>
+      </div>
     </section>
   );
 }

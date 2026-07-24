@@ -1,14 +1,14 @@
 import content from '@/content/content.json';
 import { TagIcon } from './Icons';
-import { Reveal } from './Reveal';
+import { RevealGroup, RevealItem } from './RevealGroup';
 
 export function Offers() {
   return (
     <section className="px-[var(--gutter)] pb-[var(--section-y)]">
-      <Reveal>
+      <RevealGroup>
         <ul className="mx-auto grid max-w-[var(--container)] grid-cols-1 gap-6 md:grid-cols-3">
           {content.offers.map((offer) => (
-            <li
+            <RevealItem
               key={offer.title}
               className={`rounded-[var(--r-sm)] border p-6 text-center transition-transform duration-[var(--d-fast)] ease-[var(--ease-soft)] hover:-translate-y-1 ${
                 offer.highlight ? 'border-accent bg-accent/5' : 'border-line bg-surface'
@@ -25,10 +25,10 @@ export function Offers() {
                 {offer.title}
               </p>
               <p className="mt-1 font-body text-sm text-muted">{offer.subtext}</p>
-            </li>
+            </RevealItem>
           ))}
         </ul>
-      </Reveal>
+      </RevealGroup>
     </section>
   );
 }
