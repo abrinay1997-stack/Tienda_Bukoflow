@@ -1,72 +1,138 @@
 'use client';
 
-import { useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import content from '@/content/content.json';
 import { SectionHeading } from './SectionHeading';
 
-export function Testimonials() {
-  const trackRef = useRef<HTMLUListElement>(null);
+const { length } = content.testimonials;
+const AUTOPLAY_MS = 5000;
 
-  const scrollByCard = (direction: 1 | -1) => {
-    const track = trackRef.current;
-    if (!track) return;
-    const card = track.querySelector('li');
-    const amount = (card?.clientWidth ?? 300) + 24; // ancho de tarjeta + gap-6
-    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    track.scrollBy({ left: amount * direction, behavior: reduceMotion ? 'auto' : 'smooth' });
-  };
+export function Testimonials() {
+  const [index, setIndex] = useState(0);
+  const [paused, setPaused] = useState(false);
+  const [reduceMotion, setReduceMotion] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    setReduceMotion(window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+  }, []);
+
+  useEffect(() => {
+    if (reduceMotion || paused) return;
+    const id = setInterval(() => setIndex((i) => (i + 1) % length), AUTOPLAY_MS);
+    return () => clearInterval(id);
+  }, [reduceMotion, paused]);
+
+  const next = () => setIndex((i) => (i + 1) % length);
+  const prev = () => setIndex((i) => (i - 1 + length) % length);
 
   return (
     <section className="px-[var(--gutter)] py-[var(--section-y)]">
       <div className="mx-auto max-w-[var(--container)]">
         <SectionHeading kicker="Prueba social" title="Artistas que confían en BUKOFLOW" />
 
-        <div className="relative mt-12">
-          <ul
-            ref={trackRef}
-            className="flex snap-x snap-mandatory gap-6 overflow-x-auto scroll-smooth pb-4"
-          >
-            {content.testimonials.map((testimonial, i) => (
-              <li
-                key={`${testimonial.artist}-${i}`}
-                className="w-[280px] shrink-0 snap-center sm:w-[300px]"
-              >
-                <div className="overflow-hidden rounded-[var(--r-sm)] border border-line bg-surface">
-                  <iframe
-                    title={`Beat producido para ${testimonial.artist}, en Spotify`}
-                    src={testimonial.spotifySrc}
-                    className="h-[352px] w-full border-0"
-                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                    loading="lazy"
-                  />
-                </div>
-                <p className="mt-3 text-center font-display text-fg">{testimonial.artist}</p>
-              </li>
-            ))}
-          </ul>
+        <div
+          ref={containerRef}
+          onMouseEnter={() => setPaused(true)}
+          onMouseLeave={() => setPaused(false)}
+          onFocus={() => setPaused(true)}
+          onBlur={() => setPaused(false)}
+          className="relative mt-16 flex h-[440px] items-center justify-center"
+          style={{ perspective: '1400px' }}
+        >
+          <div className="relative h-full w-full" style={{ transformStyle: 'preserve-3d' }}>
+            {content.testimonials.map((testimonial, i) => {
+              let offset = (i - index + length) % length;
+              if (offset > length / 2) offset -= length;
+              const abs = Math.abs(offset);
+              const isCenter = offset === 0;
+              const visible = abs <= 2;
 
-          <div className="mt-2 flex justify-center gap-3">
-            <button
-              type="button"
-              onClick={() => scrollByCard(-1)}
-              className="flex h-11 w-11 items-center justify-center rounded-full border border-line text-fg transition-colors hover:border-accent hover:text-accent"
-              aria-label="Testimonio anterior"
-            >
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} aria-hidden="true">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
-              </svg>
-            </button>
-            <button
-              type="button"
-              onClick={() => scrollByCard(1)}
-              className="flex h-11 w-11 items-center justify-center rounded-full border border-line text-fg transition-colors hover:border-accent hover:text-accent"
-              aria-label="Siguiente testimonio"
-            >
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} aria-hidden="true">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-              </svg>
-            </button>
+              const translateX = offset * 135;
+              const translateZ = -abs * 130;
+              const rotateY = -offset * 24;
+              const scale = 1 - abs * 0.12;
+              const opacity = visible ? 1 - abs * 0.28 : 0;
+
+              return (
+                // eslint-disable-next-line jsx-a11y/no-static-element-interactions
+                <div
+                  key={`${testimonial.artist}-${i}`}
+                  onClick={() => setIndex(i)}
+                  aria-hidden={!isCenter}
+                  className="absolute left-1/2 top-1/2 w-[280px] cursor-pointer transition-all duration-700 ease-[var(--ease-out)] sm:w-[300px]"
+                  style={{
+                    transform: `translate(-50%, -50%) translateX(${translateX}px) translateZ(${translateZ}px) rotateY(${rotateY}deg) scale(${scale})`,
+                    opacity,
+                    zIndex: 50 - abs,
+                    pointerEvents: isCenter ? 'none' : 'auto',
+                  }}
+                >
+                  <div
+                    className={`overflow-hidden rounded-xl shadow-2xl transition-shadow ${
+                      isCenter ? 'shadow-accent/30 ring-2 ring-accent/50' : 'shadow-black/50'
+                    }`}
+                  >
+                    <iframe
+                      title={`Beat producido para ${testimonial.artist}, en Spotify`}
+                      src={testimonial.spotifySrc}
+                      className="h-[352px] w-full rounded-xl border-0"
+                      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                      loading="lazy"
+                      tabIndex={-1}
+                    />
+                  </div>
+                  <p
+                    className={`mt-3 text-center font-display text-lg transition-opacity duration-500 ${
+                      isCenter ? 'text-fg opacity-100' : 'text-muted opacity-0'
+                    }`}
+                  >
+                    {testimonial.artist}
+                  </p>
+                </div>
+              );
+            })}
           </div>
+        </div>
+
+        <div className="mt-6 flex items-center justify-center gap-6">
+          <button
+            type="button"
+            onClick={prev}
+            className="flex h-11 w-11 items-center justify-center rounded-full border border-line text-fg transition-colors hover:border-accent hover:text-accent"
+            aria-label="Testimonio anterior"
+          >
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} aria-hidden="true">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+
+          <div className="flex gap-2" role="tablist" aria-label="Testimonios">
+            {content.testimonials.map((testimonial, i) => (
+              <button
+                key={`${testimonial.artist}-dot-${i}`}
+                type="button"
+                role="tab"
+                aria-selected={i === index}
+                aria-label={`Ver testimonio de ${testimonial.artist}`}
+                onClick={() => setIndex(i)}
+                className={`h-2.5 w-2.5 rounded-full transition-colors ${
+                  i === index ? 'bg-accent' : 'bg-line hover:bg-muted'
+                }`}
+              />
+            ))}
+          </div>
+
+          <button
+            type="button"
+            onClick={next}
+            className="flex h-11 w-11 items-center justify-center rounded-full border border-line text-fg transition-colors hover:border-accent hover:text-accent"
+            aria-label="Siguiente testimonio"
+          >
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} aria-hidden="true">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
         </div>
       </div>
     </section>
