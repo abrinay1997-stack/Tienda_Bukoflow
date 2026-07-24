@@ -1,10 +1,15 @@
 'use client';
 
+import dynamic from 'next/dynamic';
 import { useEffect, useRef } from 'react';
 import content from '@/content/content.json';
+import { useCanRender3D } from '@/hooks/useCanRender3D';
+
+const ParticleCanvas = dynamic(() => import('./hero/ParticleCanvas'), { ssr: false });
 
 export function Hero() {
   const h1Ref = useRef<HTMLHeadingElement>(null);
+  const canRender3D = useCanRender3D();
 
   useEffect(() => {
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -43,12 +48,16 @@ export function Hero() {
   }, []);
 
   const scrollToPlayer = () => {
-    document.getElementById('player')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    document.getElementById('player')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
 
   return (
-    <section className="relative flex min-h-screen items-center justify-center overflow-hidden bg-bg px-[var(--gutter)] pb-24 pt-32">
-      <div aria-hidden="true" className="spotlight" />
+    <section className="relative flex h-screen items-center justify-center overflow-hidden bg-bg px-[var(--gutter)]">
+      {canRender3D ? (
+        <ParticleCanvas />
+      ) : (
+        <div aria-hidden="true" className="spotlight" />
+      )}
 
       <div className="relative z-content mx-auto flex max-w-[var(--container)] flex-col items-center gap-8 text-center">
         <p className="font-mono text-mono uppercase tracking-[var(--tr-mono)] text-accent">
@@ -71,21 +80,6 @@ export function Hero() {
           <a href={content.hero.secondaryCta.href} className="btn-ghost">
             {content.hero.secondaryCta.label}
           </a>
-        </div>
-
-        <div className="mt-8 w-full max-w-2xl">
-          <div className="overflow-hidden rounded-[var(--r-sm)] border border-line bg-surface shadow-2xl">
-            <iframe
-              id="player"
-              title="Reproductor de beats BUKOFLOW"
-              src={content.player.embedUrl}
-              className="h-[400px] w-full border-0 md:h-[500px]"
-              allowFullScreen
-              loading="lazy"
-            >
-              {`Tu navegador no soporta iframes. Visita la tienda en ${content.player.fallbackUrl}`}
-            </iframe>
-          </div>
         </div>
       </div>
     </section>

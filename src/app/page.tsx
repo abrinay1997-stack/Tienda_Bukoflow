@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Hero } from '@/components/Hero';
+import { Player } from '@/components/Player';
 import { CatalogIntro } from '@/components/CatalogIntro';
 import { Offers } from '@/components/Offers';
 import { PurchaseProcess } from '@/components/PurchaseProcess';
@@ -16,6 +17,7 @@ export default function HomePage() {
   return (
     <main id="main">
       <Hero />
+      <Player />
       <CatalogIntro />
       <Offers />
       <PurchaseProcess />
