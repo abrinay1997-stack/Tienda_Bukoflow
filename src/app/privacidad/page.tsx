@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import policy from '@/content/privacy-policy.json';
+import { Reveal } from '@/components/Reveal';
 
 export const metadata: Metadata = {
   title: policy.title,
@@ -11,12 +12,14 @@ export default function PrivacidadPage() {
   return (
     <main id="main" className="px-[var(--gutter)] pb-[var(--section-y)] pt-32">
       <article className="mx-auto max-w-3xl">
-        <h1 className="text-center font-display text-3xl font-light tracking-tight text-fg">
-          {policy.title}
-        </h1>
-        <p className="mt-3 text-center font-mono text-mono uppercase tracking-[var(--tr-mono)] text-muted">
-          Vigente desde el {policy.effectiveDate}
-        </p>
+        <Reveal immediate>
+          <h1 className="text-center font-display text-3xl font-light tracking-tight text-fg">
+            {policy.title}
+          </h1>
+          <p className="mt-3 text-center font-mono text-mono uppercase tracking-[var(--tr-mono)] text-muted">
+            Vigente desde el {policy.effectiveDate}
+          </p>
+        </Reveal>
 
         <div className="mt-10 space-y-4 font-body text-base leading-[var(--lh-body)] text-muted">
           {policy.intro.map((paragraph) => (

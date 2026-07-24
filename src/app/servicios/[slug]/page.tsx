@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import content from '@/content/content.json';
+import { Reveal } from '@/components/Reveal';
+import { RevealGroup, RevealItem } from '@/components/RevealGroup';
 
 export const dynamicParams = false;
 
@@ -53,67 +55,78 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <article className="mx-auto max-w-3xl">
-        <p className="font-mono text-mono uppercase tracking-[var(--tr-mono)] text-accent">
-          {service.kicker}
-        </p>
-        <h1 className="mt-3 font-display text-3xl font-light tracking-tight text-fg">
-          {service.title}
-        </h1>
-        <p className="mt-4 font-body text-lg text-muted">{service.headline}</p>
+        <Reveal immediate>
+          <p className="font-mono text-mono uppercase tracking-[var(--tr-mono)] text-accent">
+            {service.kicker}
+          </p>
+          <h1 className="mt-3 font-display text-3xl font-light tracking-tight text-fg">
+            {service.title}
+          </h1>
+          <p className="mt-4 font-body text-lg text-muted">{service.headline}</p>
 
-        <div className="mt-10 space-y-4 font-body text-base leading-[var(--lh-body)] text-muted">
-          {service.intro.map((paragraph) => (
-            <p key={paragraph}>{paragraph}</p>
-          ))}
-        </div>
+          <div className="mt-10 space-y-4 font-body text-base leading-[var(--lh-body)] text-muted">
+            {service.intro.map((paragraph) => (
+              <p key={paragraph}>{paragraph}</p>
+            ))}
+          </div>
+        </Reveal>
 
         {includes && (
-          <ul className="mt-8 space-y-3">
-            {includes.map((item) => (
-              <li key={item} className="flex items-start gap-3 font-body text-sm text-muted">
-                <span className="mt-0.5 text-accent" aria-hidden="true">
-                  &#10003;
-                </span>
-                <span>{item}</span>
-              </li>
-            ))}
-          </ul>
+          <RevealGroup immediate>
+            <ul className="mt-8 space-y-3">
+              {includes.map((item) => (
+                <RevealItem
+                  key={item}
+                  className="flex items-start gap-3 font-body text-sm text-muted"
+                >
+                  <span className="mt-0.5 text-accent" aria-hidden="true">
+                    &#10003;
+                  </span>
+                  <span>{item}</span>
+                </RevealItem>
+              ))}
+            </ul>
+          </RevealGroup>
         )}
 
-        <ol className="mt-12 space-y-8 border-t border-line pt-8">
-          {service.steps.map((step) => (
-            <li key={step.title}>
-              <h2 className="font-display text-lg font-medium text-fg">{step.title}</h2>
-              {'text' in step && step.text && (
-                <p className="mt-2 font-body text-sm text-muted">{step.text}</p>
-              )}
-              {'list' in step && step.list && (
-                <ul className="mt-3 space-y-2 pl-5">
-                  {step.list.map((item) => (
-                    <li key={item} className="list-disc font-body text-sm text-muted">
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              )}
-            </li>
-          ))}
-        </ol>
+        <RevealGroup immediate>
+          <ol className="mt-12 space-y-8 border-t border-line pt-8">
+            {service.steps.map((step) => (
+              <RevealItem key={step.title}>
+                <h2 className="font-display text-lg font-medium text-fg">{step.title}</h2>
+                {'text' in step && step.text && (
+                  <p className="mt-2 font-body text-sm text-muted">{step.text}</p>
+                )}
+                {'list' in step && step.list && (
+                  <ul className="mt-3 space-y-2 pl-5">
+                    {step.list.map((item) => (
+                      <li key={item} className="list-disc font-body text-sm text-muted">
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </RevealItem>
+            ))}
+          </ol>
+        </RevealGroup>
 
-        <p className="mt-10 border-t border-line pt-8 font-body text-sm text-muted">
-          {service.postDelivery}
-        </p>
+        <Reveal immediate>
+          <p className="mt-10 border-t border-line pt-8 font-body text-sm text-muted">
+            {service.postDelivery}
+          </p>
 
-        <div className="mt-10 text-center">
-          <a
-            href={service.purchaseUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-primary"
-          >
-            {ctaLabel}
-          </a>
-        </div>
+          <div className="mt-10 text-center">
+            <a
+              href={service.purchaseUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary"
+            >
+              {ctaLabel}
+            </a>
+          </div>
+        </Reveal>
       </article>
     </main>
   );

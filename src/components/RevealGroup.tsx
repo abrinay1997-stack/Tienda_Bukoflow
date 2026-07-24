@@ -15,18 +15,21 @@ const item = {
   show: { opacity: 1, y: 0 },
 };
 
-export function RevealGroup({ children }: { children: ReactNode }) {
+export function RevealGroup({
+  children,
+  immediate = false,
+}: {
+  children: ReactNode;
+  immediate?: boolean;
+}) {
   const reduceMotion = useReducedMotion();
+  const trigger = immediate
+    ? { animate: 'show' }
+    : { whileInView: 'show', viewport: { once: true, margin: '-80px' } };
 
   return (
     <LazyMotion features={loadFeatures}>
-      <m.div
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true, margin: '-80px' }}
-        variants={container}
-        transition={{ staggerChildren: reduceMotion ? 0 : 0.06 }}
-      >
+      <m.div initial="hidden" {...trigger} variants={container} transition={{ staggerChildren: reduceMotion ? 0 : 0.06 }}>
         {children}
       </m.div>
     </LazyMotion>
