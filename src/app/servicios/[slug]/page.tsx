@@ -21,8 +21,9 @@ export async function generateMetadata({
   const service = getService(slug);
   if (!service) return {};
   return {
-    title: `${service.title} | BUKOFLOW`,
+    title: service.title,
     description: service.headline,
+    alternates: { canonical: `/servicios/${service.id}` },
   };
 }
 

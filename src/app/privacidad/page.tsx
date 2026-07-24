@@ -2,8 +2,9 @@ import type { Metadata } from 'next';
 import policy from '@/content/privacy-policy.json';
 
 export const metadata: Metadata = {
-  title: `${policy.title} | BUKOFLOW`,
+  title: policy.title,
   description: `Política de privacidad de BUKOFLOW: qué datos recopilamos, cómo los usamos y tus derechos. Vigente desde el ${policy.effectiveDate}.`,
+  alternates: { canonical: '/privacidad' },
 };
 
 export default function PrivacidadPage() {

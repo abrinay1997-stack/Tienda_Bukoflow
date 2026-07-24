@@ -1,15 +1,23 @@
 import type { Metadata } from 'next';
 import content from '@/content/content.json';
 import { FAQList } from '@/components/FAQList';
+import { buildFaqJsonLd } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: `${content.customMusic.h1} | BUKOFLOW`,
+  title: content.customMusic.h1,
   description: content.customMusic.intro[0],
+  alternates: { canonical: '/produccion-musical' },
 };
 
 export default function ProduccionMusicalPage() {
   return (
     <main id="main" className="px-[var(--gutter)] pb-[var(--section-y)] pt-32">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(buildFaqJsonLd(content.customMusic.faq)),
+        }}
+      />
       <article className="mx-auto max-w-3xl">
         <h1 className="text-center font-display text-3xl font-light tracking-tight text-fg">
           {content.customMusic.h1}

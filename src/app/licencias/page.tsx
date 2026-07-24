@@ -3,8 +3,9 @@ import content from '@/content/content.json';
 import { CheckIcon } from '@/components/Icons';
 
 export const metadata: Metadata = {
-  title: 'Licencias | BUKOFLOW',
+  title: 'Licencias',
   description: 'Compara las licencias de BUKOFLOW: Básica, Standard, Ilimitada y Exclusiva. MP3, WAV y Stems para uso comercial en Spotify, YouTube y más.',
+  alternates: { canonical: '/licencias' },
 };
 
 export default function LicenciasPage() {

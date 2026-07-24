@@ -3,6 +3,7 @@ import { Outfit, Inter, JetBrains_Mono } from 'next/font/google';
 import content from '@/content/content.json';
 import { Nav } from '@/components/Nav';
 import { Footer } from '@/components/Footer';
+import { SITE_URL } from '@/lib/site';
 import './globals.css';
 
 const outfit = Outfit({
@@ -26,15 +27,44 @@ const jetbrainsMono = JetBrains_Mono({
   display: 'swap',
 });
 
+const organizationJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: content.legal.company,
+  url: SITE_URL,
+  email: content.nap.email,
+  sameAs: [content.social.instagram, content.social.youtube, content.social.tiktok],
+};
+
 export const metadata: Metadata = {
-  title: content.meta.title,
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: content.meta.title,
+    template: '%s | BUKOFLOW',
+  },
   description: content.meta.description,
+  openGraph: {
+    type: 'website',
+    locale: 'es_PA',
+    siteName: 'BUKOFLOW',
+    title: content.meta.title,
+    description: content.meta.description,
+  },
+  twitter: {
+    card: 'summary',
+    title: content.meta.title,
+    description: content.meta.description,
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="es" className={`${outfit.variable} ${inter.variable} ${jetbrainsMono.variable}`}>
       <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
         <a href="#main" className="skip-link">
           Ir al contenido
         </a>
