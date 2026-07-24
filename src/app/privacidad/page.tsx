@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import policy from '@/content/privacy-policy.json';
 import { Reveal } from '@/components/Reveal';
+import { ParticleText } from '@/components/ParticleText';
 
 export const metadata: Metadata = {
   title: policy.title,
@@ -13,9 +14,9 @@ export default function PrivacidadPage() {
     <main id="main" className="px-[var(--gutter)] pb-[var(--section-y)] pt-32">
       <article className="mx-auto max-w-3xl">
         <Reveal immediate>
-          <h1 className="text-center font-display text-3xl font-light tracking-tight text-fg">
+          <ParticleText as="h1" className="text-center font-display text-3xl font-light tracking-tight text-fg">
             {policy.title}
-          </h1>
+          </ParticleText>
           <p className="mt-3 text-center font-mono text-mono uppercase tracking-[var(--tr-mono)] text-muted">
             Vigente desde el {policy.effectiveDate}
           </p>
@@ -30,7 +31,9 @@ export default function PrivacidadPage() {
         <div className="mt-12 space-y-12 border-t border-line pt-12">
           {policy.sections.map((section) => (
             <section key={section.heading}>
-              <h2 className="font-display text-xl font-medium text-fg">{section.heading}</h2>
+              <ParticleText as="h2" className="font-display text-xl font-medium text-fg">
+                {section.heading}
+              </ParticleText>
 
               {'paragraphs' in section && section.paragraphs && (
                 <div className="mt-4 space-y-3 font-body text-sm leading-[var(--lh-body)] text-muted">

@@ -3,6 +3,7 @@ import content from '@/content/content.json';
 import { FAQList } from '@/components/FAQList';
 import { buildFaqJsonLd } from '@/lib/seo';
 import { Reveal } from '@/components/Reveal';
+import { ParticleText } from '@/components/ParticleText';
 
 export const metadata: Metadata = {
   title: 'Centro de Ayuda',
@@ -21,16 +22,16 @@ export default function AyudaPage() {
       />
       <div className="mx-auto max-w-3xl">
         <Reveal immediate>
-          <h1 className="text-center font-display text-3xl font-light tracking-tight text-fg">
+          <ParticleText as="h1" className="text-center font-display text-3xl font-light tracking-tight text-fg">
             Centro de Ayuda
-          </h1>
+          </ParticleText>
         </Reveal>
 
         <Reveal immediate>
           <section className="mt-16">
-            <h2 className="text-center font-display text-xl font-light text-fg">
+            <ParticleText as="h2" className="text-center font-display text-xl font-light text-fg">
               Ayuda para elegir tu licencia
-            </h2>
+            </ParticleText>
             <div className="mt-8">
               <FAQList items={content.faq.licenses} />
             </div>
@@ -39,9 +40,9 @@ export default function AyudaPage() {
 
         <Reveal immediate>
           <section className="mt-20">
-            <h2 className="text-center font-display text-xl font-light text-fg">
+            <ParticleText as="h2" className="text-center font-display text-xl font-light text-fg">
               Preguntas y respuestas
-            </h2>
+            </ParticleText>
             <div className="mt-8">
               <FAQList items={content.faq.general} />
             </div>
