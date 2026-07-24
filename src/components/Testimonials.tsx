@@ -1,13 +1,14 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import content from '@/content/content.json';
 import { SectionHeading } from './SectionHeading';
 
-const { length } = content.testimonials;
 const AUTOPLAY_MS = 5000;
 
-export function Testimonials() {
+type Testimonial = { artist: string; spotifySrc: string };
+
+export function Testimonials({ testimonials }: { testimonials: Testimonial[] }) {
+  const length = testimonials.length;
   const [index, setIndex] = useState(0);
   const [paused, setPaused] = useState(false);
   const [reduceMotion, setReduceMotion] = useState(false);
@@ -37,16 +38,19 @@ export function Testimonials() {
           onMouseLeave={() => setPaused(false)}
           onFocus={() => setPaused(true)}
           onBlur={() => setPaused(false)}
-          className="relative mt-16 flex h-[440px] items-center justify-center"
+          className="relative mt-16 flex h-[440px] items-center justify-center overflow-hidden"
           style={{ perspective: '1400px' }}
         >
           <div className="relative h-full w-full" style={{ transformStyle: 'preserve-3d' }}>
-            {content.testimonials.map((testimonial, i) => {
+            {testimonials.map((testimonial, i) => {
               let offset = (i - index + length) % length;
               if (offset > length / 2) offset -= length;
               const abs = Math.abs(offset);
               const isCenter = offset === 0;
               const visible = abs <= 2;
+              // Solo se monta el iframe de Spotify para la tarjeta central y sus
+              // vecinas inmediatas: evita cargar los 8 reproductores a la vez en móvil.
+              const mountPlayer = abs <= 1;
 
               const translateX = offset * 202.5;
               const translateZ = -abs * 130;
@@ -73,14 +77,25 @@ export function Testimonials() {
                       isCenter ? 'shadow-accent/30 ring-2 ring-accent/50' : 'shadow-black/50'
                     }`}
                   >
-                    <iframe
-                      title={`Beat producido para ${testimonial.artist}, en Spotify`}
-                      src={testimonial.spotifySrc}
-                      className="h-[352px] w-full rounded-xl border-0"
-                      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                      loading="lazy"
-                      tabIndex={-1}
-                    />
+                    {mountPlayer ? (
+                      <iframe
+                        title={`Beat producido para ${testimonial.artist}, en Spotify`}
+                        src={testimonial.spotifySrc}
+                        className="h-[352px] w-full rounded-xl border-0"
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                        loading="lazy"
+                        tabIndex={-1}
+                      />
+                    ) : (
+                      <div
+                        aria-hidden="true"
+                        className="flex h-[352px] w-full items-center justify-center bg-surface"
+                      >
+                        <span className="font-mono text-xs uppercase tracking-[var(--tr-mono)] text-muted">
+                          {testimonial.artist}
+                        </span>
+                      </div>
+                    )}
                   </div>
                   <p
                     className={`mt-3 text-center font-display text-lg transition-opacity duration-500 ${
@@ -108,7 +123,7 @@ export function Testimonials() {
           </button>
 
           <div className="flex gap-2" role="tablist" aria-label="Testimonios">
-            {content.testimonials.map((testimonial, i) => (
+            {testimonials.map((testimonial, i) => (
               <button
                 key={`${testimonial.artist}-dot-${i}`}
                 type="button"

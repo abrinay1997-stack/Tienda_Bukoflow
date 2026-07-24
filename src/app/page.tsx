@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import content from '@/content/content.json';
 import { Hero } from '@/components/Hero';
 import { Player } from '@/components/Player';
 import { CatalogIntro } from '@/components/CatalogIntro';
@@ -22,7 +23,7 @@ export default function HomePage() {
       <Offers />
       <PurchaseProcess />
       <Pricing />
-      <Testimonials />
+      <Testimonials testimonials={content.testimonials} />
       <ServicesTeaser />
       <CTA />
     </main>
