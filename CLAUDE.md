@@ -10,7 +10,7 @@
 - **Sector / zona:** Producción musical / venta de beats (Trap, Reggaeton, Drill) · online, Panamá
 - **Objetivo principal del sitio:** Venta directa (beats + licencias) y captación de encargos de producción/mezcla/mastering
 - **Familia de ADN:** A (Dark Cinematic Luxury), adaptada — ver `docs/DECISION.md`
-- **Signature:** Spotlight sweep sobre el reproductor de BeatStars
+- **Signature:** Halo difuminado estático detrás del H1 del Hero (se probaron partículas 3D, el cliente prefirió quitarlas)
 - **Arquitectura:** Multipágina (Next.js App Router, SSG)
 - **Versión del kit:** zera-kit v1.0.0 (primera instancia)
 
@@ -78,21 +78,22 @@ Ejecuta las cuatro pasadas de calidad en este orden: **SEO → Accesibilidad →
 
 ## Estado actual
 
-**2026-07-23 — Sitio construido, pulido y probado. Falta solo el switch final de Netlify.**
+**2026-07-24 — Netlify conectado, sitio en producción en tienda.bukoflow.com.**
 
 Hecho:
 - Proyecto anterior (Vite + AI Studio, con `@google/genai` sin usar) movido íntegro a `legacy-vite/` como referencia — nada se perdió.
-- Sitio completo en Next.js App Router: Home (Nav, Hero 3D, Player ancho, CatalogIntro, Offers, PurchaseProcess, Pricing, Testimonials 3D, ServicesTeaser, CTA) + `/servicios/[mezcla|mastering|dolby-atmos|beat-personalizado]` + `/produccion-musical` + `/ayuda` + `/licencias` + `/privacidad` (política real de bukoflow.com, traducida).
+- Sitio completo en Next.js App Router: Home (Nav con dropdown de Servicios, Hero, Player ancho, CatalogIntro, Offers, PurchaseProcess, Pricing, Testimonials 3D, ServicesTeaser, CTA) + `/servicios/[mezcla|mastering|dolby-atmos|beat-personalizado]` + `/produccion-musical` + `/ayuda` + `/licencias` + `/privacidad` (política real de bukoflow.com, traducida).
 - Las 4 pasadas de calidad (SEO, A11y, Rendimiento, Copy) — ver commits.
-- Ronda de feedback del cliente (7 puntos) resuelta: Hero a pantalla completa, player ancho, partículas 3D (Three.js) + framer-motion, tarjetas de Testimonials arregladas (sin costura, efecto 3D restaurado), FAQ solo en /ayuda, quitado el link a bukoflow.com.
-- Pulido de animación via skill `emilkowalski/skill`: acordeón de FAQ animado, stagger en grillas.
+- Ronda de feedback del cliente (7 puntos) resuelta: Hero a pantalla completa, player ancho, tarjetas de Testimonials arregladas (sin costura, efecto 3D restaurado), FAQ solo en /ayuda, quitado el link a bukoflow.com.
+- Se probaron partículas 3D (Three.js) en el Hero y un efecto de disolución en partículas para los títulos (H1/H2) al hacer scroll; ambas se construyeron, verificaron y funcionaban bien, pero el cliente decidió no usarlas — se revirtieron. El Hero quedó con un halo difuminado estático (sin movimiento) detrás del H1, que es lo que gustó.
+- Nav "Servicios" era un link roto a una página inexistente — ahora es un dropdown con los 4 servicios reales.
+- Testimonials: carrusel 3D con 8 tarjetas (se agregaron "CONEJO MALO" y "LICENCIA P" de Avalon Davies, verificadas en Spotify antes de agregarlas), espaciado ajustado según feedback del cliente.
 - Contenido verificado contra bukoflow.com/services en vivo — corregido precio real de Beat Personalizado ($150).
-- Chatbot: widget de chat completo, probado de punta a punta con la key real de Groq (server-side, nunca expuesta al cliente).
-- `GROQ_API_KEY` ya configurada como secreto en Netlify (proyecto `rad-dasik-34f774` / tienda.bukoflow.com), lista para cuando se conecte el repo.
+- Chatbot: base de conocimiento completa (servicios, licencias, FAQ, producción a medida), memoria de conversación (historial completo por sesión), respuestas cortas y persuasivas (60-100 caracteres, tono de venta), sin la palabra "asistente" en el UI. Probado de punta a punta en local y en producción.
+- `GROQ_API_KEY` configurada como secreto en Netlify (proyecto `rad-dasik-34f774`), confirmada funcionando en vivo.
+- **Netlify conectado a este repo** (reemplazó el "Netlify Drop" anterior). Deploy de producción verificado: estado `ready`, build de Next.js exitoso, función server-side desplegada, sin secretos filtrados en el scan de Netlify.
 - Git propio en esta carpeta (aislado del repo roto de nivel superior en `C:\Users\MIPC`), remoto `Tienda_Bukoflow`, todo pusheado.
 
 Falta:
-- **Conectar este repo a Netlify** (reemplazando el deploy actual por "Netlify Drop", que no tiene el código nuevo) — pendiente a propósito hasta que el cliente confirme que todo funciona perfecto. Es el único paso que falta para que el sitio nuevo quede en vivo.
 - Imagen OG 1200×630 real (no inventada) para redes sociales — `content.meta.ogImage` sigue vacío a propósito.
 - Bloqueado esperando al cliente: cifras verificables para un bloque de estadísticas (S07), IDs reales de GA4/Meta Pixel si se van a usar.
-- Bloqueado esperando del cliente: cifras verificables para el bloque de stats (S07), IDs reales de GA4/Meta Pixel si se van a usar.
