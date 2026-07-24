@@ -57,7 +57,7 @@ export function Hero() {
 
         <h1
           ref={h1Ref}
-          className="font-display text-[clamp(2.5rem,1.2rem+7vw,7rem)] font-extralight leading-[var(--lh-tight)] tracking-[var(--tr-display)] text-fg"
+          className="font-display text-[clamp(2.5rem,1.2rem+7vw,7rem)] font-light leading-[var(--lh-tight)] tracking-tight text-fg"
         >
           {content.hero.h1}
         </h1>

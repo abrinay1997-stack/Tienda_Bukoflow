@@ -6,7 +6,7 @@
   },
   "hero": {
     "kicker": "BUKOFLOW STORE",
-    "h1": "Tu Próximo Hit Comienza Aquí",
+    "h1": "Tu Hit Comienza Aquí",
     "sub": "Beats de Trap, Reggaeton y Drill con calidad de industria. Licencias inmediatas, sonido único.",
     "cta": { "label": "Explorar Catálogo", "action": "scrollToPlayer" },
     "secondaryCta": { "label": "Producción Musical a Medida", "href": "/produccion-musical" }
