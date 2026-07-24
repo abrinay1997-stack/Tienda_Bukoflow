@@ -78,16 +78,21 @@ Ejecuta las cuatro pasadas de calidad en este orden: **SEO → Accesibilidad →
 
 ## Estado actual
 
-**2026-07-23 — Fase 3 completada (scaffold).**
+**2026-07-23 — Fases 3, 4 y 5 completadas (scaffold, construcción y las 4 pasadas de calidad).**
 
 Hecho:
 - Proyecto anterior (Vite + AI Studio, con `@google/genai` sin usar) movido íntegro a `legacy-vite/` como referencia — nada se perdió.
-- Next.js App Router scaffolded: tokens.css, brand.json, content.json con todo el contenido real extraído (servicios, precios, FAQ completo, testimonios, contacto, redes).
-- Git propio inicializado en esta carpeta (aislado del repo roto de nivel superior en `C:\Users\MIPC`), remoto apuntando a `Tienda_Bukoflow`.
-- `docs/DECISION.md` documenta la decisión de Fase 1 completa.
+- Sitio completo en Next.js App Router: Home (Nav, Hero con spotlight, CatalogIntro, Offers, PurchaseProcess, Pricing, Testimonials, ServicesTeaser, FAQ, CTA, Footer) + `/servicios/[mezcla|mastering|dolby-atmos|beat-personalizado]` + `/produccion-musical` + `/ayuda` + `/licencias` + `/privacidad` (política real de bukoflow.com, traducida).
+- Todo verificado en navegador real (Chrome), no solo por build — varios bugs reales se encontraron y corrigieron así (hidratación del iframe, jerarquía H1/H2, build estático roto por sitemap/robots).
+- Dominio confirmado: `tienda.bukoflow.com`.
+- Pasada 1 SEO: canonical por página, OG/Twitter, JSON-LD (Organization + FAQPage + Service), sitemap.xml, robots.txt, title/description dentro de límite.
+- Pasada 2 A11y: red de seguridad global de `prefers-reduced-motion`, objetivos táctiles ≥44px, verificado con teclado real (skip link, focus rings, dropdown por teclado).
+- Pasada 3 Rendimiento: First Load JS ~112KB (presupuesto 140KB), fuentes autohospedadas subseteadas, sin librerías duplicadas.
+- Pasada 4 Copy: auditoría limpia, cero placeholders, testimonios con nombres reales.
+- Git propio en esta carpeta (aislado del repo roto de nivel superior en `C:\Users\MIPC`), remoto `Tienda_Bukoflow`, todo pusheado.
 
 Falta:
-- Fase 4: construir el Hero (S02c) real — se muestra al usuario antes de seguir con el resto de bloques.
-- Migrar el resto de bloques (servicios, pricing, testimonios, FAQ, footer) desde `legacy-vite/components/` al sistema de tokens/bloques nuevo.
-- Conectar el chatbot de Groq a una UI real (el API route es solo el plumbing server-side).
-- Bloqueado esperando del cliente: cifras verificables para el bloque de stats (S07), IDs reales de GA4/Meta Pixel si se van a usar, confirmación de si `bukoflow.com` (dominio actual apuntando a otro sitio) migra a este proyecto o coexisten.
+- Conectar el chatbot de Groq a una UI real en el sitio (el API route ya funciona server-side, falta el widget de chat + la API key real del usuario en Netlify).
+- Desplegar en Netlify (dominio, `GROQ_API_KEY`, verificar `@netlify/plugin-nextjs`).
+- Imagen OG 1200×630 real (no inventada) para redes sociales — `content.meta.ogImage` sigue vacío a propósito.
+- Bloqueado esperando del cliente: cifras verificables para el bloque de stats (S07), IDs reales de GA4/Meta Pixel si se van a usar.
