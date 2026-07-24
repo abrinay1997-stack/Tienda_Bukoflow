@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import content from '@/content/content.json';
 import { Hero } from '@/components/Hero';
 import { Player } from '@/components/Player';
 import { CatalogIntro } from '@/components/CatalogIntro';
@@ -16,13 +17,19 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <main id="main">
-      <Hero />
+      <Hero
+        kicker={content.hero.kicker}
+        h1={content.hero.h1}
+        sub={content.hero.sub}
+        ctaLabel={content.hero.cta.label}
+        secondaryCta={content.hero.secondaryCta}
+      />
       <Player />
       <CatalogIntro />
       <Offers />
       <PurchaseProcess />
       <Pricing />
-      <Testimonials />
+      <Testimonials testimonials={content.testimonials} />
       <ServicesTeaser />
       <CTA />
     </main>

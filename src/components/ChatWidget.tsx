@@ -1,7 +1,6 @@
 'use client';
 
 import { useId, useState } from 'react';
-import content from '@/content/content.json';
 
 type ChatMessage = { role: 'user' | 'assistant'; text: string };
 
@@ -10,7 +9,7 @@ const GREETING: ChatMessage = {
   text: '¡Hola! Soy BUKOFLOW. Pregúntame sobre licencias, servicios o precios.',
 };
 
-export function ChatWidget() {
+export function ChatWidget({ fallbackEmail }: { fallbackEmail: string }) {
   const [open, setOpen] = useState(false);
   const [messages, setMessages] = useState<ChatMessage[]>([GREETING]);
   const [input, setInput] = useState('');
@@ -44,7 +43,7 @@ export function ChatWidget() {
         ...prev,
         {
           role: 'assistant',
-          text: `BUKOFLOW no está disponible en este momento. Escríbenos directamente a ${content.nap.email}.`,
+          text: `BUKOFLOW no está disponible en este momento. Escríbenos directamente a ${fallbackEmail}.`,
         },
       ]);
     } finally {

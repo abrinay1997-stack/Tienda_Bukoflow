@@ -69,10 +69,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <a href="#main" className="skip-link">
           Ir al contenido
         </a>
-        <Nav />
+        <Nav
+          navItems={content.nav}
+          services={content.services.map((service) => ({ id: service.id, title: service.title }))}
+          tools={content.tools}
+        />
         {children}
         <Footer />
-        <ChatWidget />
+        <ChatWidget fallbackEmail={content.nap.email} />
       </body>
     </html>
   );
