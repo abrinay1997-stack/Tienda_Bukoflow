@@ -1,15 +1,10 @@
 'use client';
 
-import dynamic from 'next/dynamic';
 import { useEffect, useRef } from 'react';
 import content from '@/content/content.json';
-import { useCanRender3D } from '@/hooks/useCanRender3D';
-
-const ParticleCanvas = dynamic(() => import('./hero/ParticleCanvas'), { ssr: false });
 
 export function Hero() {
   const h1Ref = useRef<HTMLHeadingElement>(null);
-  const canRender3D = useCanRender3D();
 
   useEffect(() => {
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -53,11 +48,7 @@ export function Hero() {
 
   return (
     <section className="relative flex h-screen items-center justify-center overflow-hidden bg-bg px-[var(--gutter)]">
-      {canRender3D ? (
-        <ParticleCanvas />
-      ) : (
-        <div aria-hidden="true" className="spotlight" />
-      )}
+      <div aria-hidden="true" className="spotlight" />
 
       <div className="relative z-content mx-auto flex max-w-[var(--container)] flex-col items-center gap-8 text-center">
         <p className="font-mono text-mono uppercase tracking-[var(--tr-mono)] text-accent">

@@ -73,7 +73,7 @@ body {
   }
 }
 
-/* Signature: barrido de spotlight sobre el hero/reproductor. Solo transform. */
+/* Signature: halo difuminado centrado detrás del hero. Estático; solo las partículas se mueven. */
 .spotlight {
   position: absolute;
   inset: -20%;
@@ -81,26 +81,9 @@ body {
   pointer-events: none;
   background: radial-gradient(circle at 50% 50%, rgba(255, 61, 0, 0.28), transparent 60%);
   filter: blur(60px);
-  animation: spotlight-sweep 14s var(--ease-inout) infinite;
-  will-change: transform;
-}
-
-@keyframes spotlight-sweep {
-  0%,
-  100% {
-    transform: translate(-12%, -8%);
-  }
-  50% {
-    transform: translate(12%, 8%);
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .spotlight {
-    animation: none;
-    transform: translate(0, 0);
-  }
-
   /*
     Red de seguridad global: cualquier transition/animation que algún
     componente haya escrito con una duración fija (no ligada a --d-fast)

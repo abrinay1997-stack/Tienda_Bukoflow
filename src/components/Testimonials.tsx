@@ -48,7 +48,7 @@ export function Testimonials() {
               const isCenter = offset === 0;
               const visible = abs <= 2;
 
-              const translateX = offset * 135;
+              const translateX = offset * 405;
               const translateZ = -abs * 130;
               const rotateY = -offset * 24;
               const scale = 1 - abs * 0.12;
